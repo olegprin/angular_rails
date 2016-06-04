@@ -1,0 +1,28 @@
+
+  <div class="content">
+    <div class="content_resize">
+      <div class="mainbar_article">
+        <div class="row">
+          <div class="col-md-1">
+          </div>
+          <div class="col-md-8">
+            <% @films.each do |film| %>
+            <%=render partial: "home/film", locals: {film: film}%>
+            <%end%>
+          </div> 
+          <div class="col-md-3">              
+            <%#=render "home/search"%> 
+            <%=render "home/tags"%>   
+          </div>     
+        </div>        
+      </div>  
+      <p class="pages">
+        <small> 
+          <%= render_pagination_box(@films) %> 
+        </small>
+      </p>
+    </div>
+
+    <div class="clr"></div>
+  </div>
+  <%=render "films/down"%>

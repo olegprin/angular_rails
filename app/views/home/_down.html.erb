@@ -1,0 +1,24 @@
+<aside class="sidebar">
+  <div class="widget">
+    <h3 class="widgettitle">Genres</h3>
+    <ul>
+
+    </ul>
+  </div>
+  <div class="widget">
+
+
+
+    <h3 class="widgettitle"><%=t(:opening)%>
+    </h3>
+    <ul>
+    <% last_film.each do |last_film| %>
+      <li>
+        <%= link_to "#{last_film.title}", film_path(last_film.id) %> 
+        </a>
+      </li>
+    <% end %>
+
+    </ul>
+  </div>
+</aside>

@@ -1,0 +1,56 @@
+
+<%= title "Contact Us" %>
+
+  <div class="content">
+    <div class="content_resize">
+      <div class="mainbar">
+        <div class="article">
+          <h2><span>Contact</span></h2>
+          <div class="clr"></div>
+          <p><%=Configurable.contact%></p>
+        </div>
+        <div class="article">
+          <h2><span>Send us</span> mail</h2>
+          <div class="clr"></div>
+
+           <%= form_for @messagestoadministrator, layout: :vertical, label_col: "col-sm-2", control_col: "col-sm-6" do |f| %>
+
+            <ol>
+              <li>
+                  <%if user_signed_in?%>
+                <label for="name">Email (required)</label>
+                
+                  <%= f.text_field :email, value: "#{current_user.email}", size: "40"%>
+              </li>
+               <%else%>
+                <li>
+
+                <label for="email">Name (required)</label>
+                   <%= f.text_field :name, size: "40"%>
+                </li>
+              <li>
+                <label for="website">Website</label>
+                  <%= f.text_field :telephone, size: "40"%>
+              </li>
+                   <%end%>
+              <li>
+                <label for="message">Your Message</label>
+                  <%= f.text_field :name,label: "Title", size: "40"%>
+              </li>
+                <li>
+                <label for="message">Your Message</label>
+                      <%= f.text_area :message, size: "39x5"%>
+              </li>
+              <li>
+                    <%= f.submit label: "Create message"%>
+                <div class="clr"></div>
+              </li>
+            </ol>
+          <%end%>
+        </div>
+      </div>
+      <%=render "home/side"%>
+      <div class="clr"></div>
+    </div>
+  </div>
+  <%=render "films/down"%>

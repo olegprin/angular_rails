@@ -1,0 +1,7 @@
+<%if @user.films.present?%>
+  <% @user.films.each do |film|%>
+	<%=link_to "#{film.title.capitalize}", film_path(film.slug)%>
+  <%end%>
+<%else%>
+  "User didn't create any film"
+<%end%> 

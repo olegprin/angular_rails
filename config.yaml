@@ -1,0 +1,15 @@
+---
+ip: '10.10.10.101'
+
+provision_script: 'scripts/bootstrap.sh'
+
+system_synced_folder:
+  local: scripts
+  remote: /home/vagrant/scripts
+
+app_synced_folder:
+  local: .
+  remote: /home/vagrant/blog
+
+memory: 1024
+cpu: 1

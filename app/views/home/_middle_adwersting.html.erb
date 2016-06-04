@@ -1,0 +1,50 @@
+
+              <div style="margin-bottom: 40px;" class="shortcuts_item">
+                  <div class="html_banner_wrap">
+    <!--  AdRiver code START. Type:AjaxJS Site: habrahabr PZ: 0 BN: 13 -->
+    <div class="html_banner" id="adriver_banner_1109509440">
+      <span class="html_banner_text">Реклама помогает поддерживать и&nbsp;развивать наши сервисы<br><br><a href="https://habrahabr.ru/adblock/" target="_blank">[подробнее]</a></span>
+      <img src="./Интересные публикации _ Хабрахабр_files/spacer.png" class="html_banner_spacer">
+    </div>
+    <a href="https://special.habrahabr.ru/advertising/" class="firskill__label">Реклама</a>
+
+    <script type="text/javascript">
+      function show_inner_banner_block300(name, url){
+        if( typeof(name) !== 'undefined'){
+          if ($('.tabs').length && $('.tabs').width() >= 620) { // блок расчитан на >= 620 пикселей
+            $('#adriver_banner_1109509440').html('<iframe src="https://special.habrahabr.ru/api/htmlblock/'+name+'/?iframe&url='+encodeURIComponent(url)+'" width="100%" height="250"></iframe>')
+          }
+        }
+      }
+
+      var loadAdriverBanner = function(){
+        var keyword = '';
+        var custom = { 4: ar_duo1 };
+
+        if (typeof crtg_content !== 'undefined' && crtg_content) { keyword = crtg_content; }
+        
+
+        return new adriver("adriver_banner_1109509440", {sid:176776, bt:52, bn:13, custom: custom, keyword: keyword})
+      }
+
+      var checkScrollPosition = function(){
+        var htmlBlock = $('#adriver_banner_1109509440');
+            scrollTop = $(window).scrollTop(),
+            scrollBottom = $(window).scrollTop() + $(window).height(),
+            blockTopPosition = htmlBlock.parent().offset().top,
+            adBannerHeight = htmlBlock.height();
+
+        if (scrollBottom > blockTopPosition){
+          loadAdriverBanner()
+          $(window).off('scroll', checkScrollPosition);
+        }
+      };
+
+      $(function(){
+        $(window).on('scroll', checkScrollPosition);
+        $(window).on('ready', checkScrollPosition);
+      });
+    </script>
+  </div>
+
+</div>

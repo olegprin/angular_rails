@@ -1,0 +1,26 @@
+<div class="sidebar">
+  <div class="searchform">
+    <%=render "home/search"%> 
+  </div>
+  <div class="clr"></div>
+  <div class="gadget">
+    <h2 class="star"><span>Latest</span> Articles</h2>
+    <div class="clr"></div>
+    <ul class="sb_menu">
+      <%@films_latest.each do |films_latest|%>
+      <li><a> <%=link_to "#{films_latest.title}", film_path(films_latest)%></a></li>
+      <%end%>
+    </ul>
+  </div>
+  <div class="gadget">
+    <h2 class="star"><span>Random article</span></h2>
+    <div class="clr"></div>
+    <ul class="ex_menu">
+      <%@films_random.each do |films_random|%>
+      <li><a> <%=link_to "#{films_random.title}", film_path(films_random)%></a>
+      <br />
+        <%=films_random.subtitle%></li>
+      <%end%>
+    </ul>
+  </div>
+</div>

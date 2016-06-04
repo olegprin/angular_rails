@@ -1,0 +1,40 @@
+
+
+
+
+<div class="text_for_film">
+<%= bootstrap_form_for(@film, label_errors: true, layout: :vertical, label_col: "col-sm-2", control_col: "col-sm-50", multipart: true) do |f| %>
+ 
+
+ <%#= errors_for(@film)%>
+
+
+
+  
+    <%= f.text_field :title,  label: "title", placeholder: "title",:size => 160  %>  
+  
+      <%= f.cktext_area  :description, :id => 'sometext', size: "30x10"  %>
+
+
+
+      <%= f.file_field :uploaded_file, label: "insert picture", placeholder: "picture" %>
+       
+      <%= f.text_field :language, placeholder: "add tags" %>
+
+  		<%#= f.fields_for :tags do |builder| %>
+        <%#= builder.text_field :tag_type, placeholder: "add tag" %>
+  		<%#= f.hidden_field :film_id %>
+            <%# end %>
+    
+    
+       <div class="send_new_film">
+        <%= f.check_box :send_new_film, label: "Don't public" %> 
+      </div>
+    
+             
+            
+            <%= f.button t('forms.buttons.submit'), data: {disable_with: "<i class='fa fa-refresh fa-spin'></i> Creating..."}  %>
+            </div>
+           
+<% end %>
+</div>

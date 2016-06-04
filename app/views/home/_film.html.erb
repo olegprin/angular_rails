@@ -1,0 +1,17 @@
+<div class="row">
+
+  <div class="col-md-6">
+    <div class="imgage_blog">
+      <%= link_to image_tag(film.uploaded_file.url, width: 400, height: 289), film_path(film)%>
+    </div>
+  </div>
+  <div class="col-md-6">
+    <div class="post-content">     
+      <%=render partial: "home/title", locals: {film: film}%>  
+      <div class="description_overflow"><%=sanitize(film.description)%></div>
+        <%= ui_button 'read', "Read more", film_path(film) %>
+    </div>
+  </div>
+</div>
+     
+     

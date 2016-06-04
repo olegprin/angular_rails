@@ -1,0 +1,5 @@
+
+<%= form_tag results_path, method: :get, role: 'search' do %>
+  <%= text_field_tag :query, params[:query] %>
+  <%= submit_tag "Search", name: nil %>
+<% end %>

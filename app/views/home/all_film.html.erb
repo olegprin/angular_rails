@@ -1,0 +1,359 @@
+<!DOCTYPE html>
+<!-- saved from url=(0021)https://habrahabr.ru/ -->
+<html class="fonts-loaded"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><script src="./Интересные публикации _ Хабрахабр_files/context.js" type="text/javascript" async=""></script><script src="./Интересные публикации _ Хабрахабр_files/context.js" type="text/javascript" async=""></script><script id="an.yandex.ru/resource/context_static_r1125.js" src="./Интересные публикации _ Хабрахабр_files/context_static_r1125.js"></script><script id="an.yandex.ru/resource/context_static_r1125.js" src="./Интересные публикации _ Хабрахабр_files/context_static_r1125.js"></script><script type="text/javascript" async="" src="./Интересные публикации _ Хабрахабр_files/watch.js"></script><script src="./Интересные публикации _ Хабрахабр_files/context.js" type="text/javascript" async=""></script><script src="./Интересные публикации _ Хабрахабр_files/context.js" type="text/javascript" async=""></script><script async="" src="./Интересные публикации _ Хабрахабр_files/analytics.js"></script>
+    
+    <meta content="width=1024" name="viewport">
+
+    
+
+    <title>Интересные публикации / Хабрахабр</title>
+
+
+
+      <meta property="og:image" content="https://habrahabr.ru/i/habralogo.jpg">
+<link rel="image_src" href="https://habrahabr.ru/i/habralogo.jpg">
+
+    <meta name="yandex-verification" content="71593b225aeafc4e">
+    <meta name="referrer" content="unsafe-url">
+    <meta name="pocket-site-verification" content="ed24b2b9721edf0a282c5b4a3232c4">
+
+    <style type="text/css">
+      @font-face{font-family:'Fira Sans';font-style:normal;font-display:swap;font-weight:500;src:url(/fonts/0/FiraSans/FiraSans-Medium.eot);src:local('Fira Sans Medium'),local(FiraSans-Medium),url(/fonts/0/FiraSans/FiraSans-Medium.eot?#iefix) format("embedded-opentype"),url(/fonts/0/FiraSans/FiraSans-Medium.woff2) format("woff2"),url(/fonts/0/FiraSans/FiraSans-Medium.woff) format("woff"),url(/fonts/0/FiraSans/FiraSans-Medium.ttf) format("truetype")}
+    </style>
+
+      <link href="./Интересные публикации _ Хабрахабр_files/posts.css" rel="stylesheet" media="all">
+  <link href="./Интересные публикации _ Хабрахабр_files/forms.css" rel="stylesheet" media="all">
+  <link href="./Интересные публикации _ Хабрахабр_files/all.css" rel="stylesheet" media="all">
+
+    <link href="./Интересные публикации _ Хабрахабр_files/global_main.css" rel="stylesheet" media="all">
+
+  
+    
+
+    <meta name="yandex-verification" content="67d46b975fa41645">
+    
+    <meta content="Хабрахабр" name="apple-mobile-web-app-title">
+
+<link rel="apple-touch-icon-precomposed" sizes="57x57" href="https://habrahabr.ru/images/favicons/apple-touch-icon-57x57.png">
+<link rel="apple-touch-icon-precomposed" sizes="114x114" href="https://habrahabr.ru/images/favicons/apple-touch-icon-114x114.png">
+<link rel="apple-touch-icon-precomposed" sizes="72x72" href="https://habrahabr.ru/images/favicons/apple-touch-icon-72x72.png">
+<link rel="apple-touch-icon-precomposed" sizes="144x144" href="https://habrahabr.ru/images/favicons/apple-touch-icon-144x144.png">
+<link rel="apple-touch-icon-precomposed" sizes="120x120" href="https://habrahabr.ru/images/favicons/apple-touch-icon-120x120.png">
+<link rel="apple-touch-icon-precomposed" sizes="152x152" href="https://habrahabr.ru/images/favicons/apple-touch-icon-152x152.png">
+<link rel="icon" type="image/png" href="https://habrahabr.ru/images/favicons/favicon-32x32.png" sizes="32x32">
+<link rel="icon" type="image/png" href="https://habrahabr.ru/images/favicons/favicon-16x16.png" sizes="16x16">
+<meta name="application-name" content="Хабрахабр">
+<meta name="msapplication-TileColor" content="#FFFFFF">
+<meta name="msapplication-TileImage" content="mstile-144x144.png">
+
+    <%= render "home/adversting"%>
+
+
+</head>
+
+  <body>
+    <div class="layout_inner">
+      <div id="layout">
+        <div id="navbar_overlay" class="hidden"></div>
+          <div id="navbar" style="bottom: 0px;" class="fixed">
+              <div class="nav_panel">
+                  <a><%=link_to "", root_path, class: "logo"%></a>
+
+                      <a href="https://habrahabr.ru/posts/" class="tab tab_menu open" data-tab="menu_tab" title="Меню"><span class="g-icon g-icon-burger"></span></a>
+                      <a href="https://habrahabr.ru/auth/login/" class="tab tab_login" id="login" title="Войти"><span class="g-icon g-icon-lock"></span></a>
+
+                  <a href="https://habrahabr.ru/#" class="scroll_to_up scroll_to_up_for_guest" id="scroll_to_top" title="Наверх"></a>
+              </div>
+</div>
+
+          <script type="text/javascript">
+
+      $(document).on('click', '.adb-close', function(){
+          $('.lain_13_what_are_you_doing').animate({ 'height': 0 });
+
+          createCookie('adb-p', '1', 1);
+      });
+
+      function readCookie(name) {
+          var nameEQ = name + "=";
+          var ca = document.cookie.split(';');
+          for(var i=0;i < ca.length;i++) {
+              var c = ca[i];
+              while (c.charAt(0)==' ') c = c.substring(1,c.length);
+              if (c.indexOf(nameEQ) == 0) return c.substring(nameEQ.length,c.length);
+          }
+          return null;
+      }
+
+      $(document).ready(function(){
+          if (adb1 == 'yes' && !readCookie('adb-p'))
+          {
+              $('.lain_13_what_are_you_doing').show();
+          }
+      });
+  </script>
+  <!--/ noindex -->
+
+        <div class="inner">
+
+          
+            <div class="page-header page-header_inline">
+  <h1 class="page-header__title page-header__title_inline">Публикации</h1>
+<%= form_tag results_path, method: :get, role: 'search', class: "search-form" do %>
+  <%= text_field_tag :query, params[:query], class: "search-form__field", placeholder: "Поиск" %>
+  <%= submit_tag "Search", name: nil, class: "search-form__button icon_search" %>
+<% end %>
+
+
+</div>
+  <div class="column-wrapper js-sticky-wrapper">
+    <div class="content_left js-content_left">
+        <div class="tabs">
+    <ul class="tabs-menu tabs-menu_habrahabr">
+        <li class="tabs-menu__item tabs-menu__item_inline">
+          <a href="https://habrahabr.ru/all/" class="tab-item ">
+            <span class="tab-item__value">
+              Все подряд&nbsp;
+              <strong class="counter"></strong>
+              <strong class="counter_new">+40</strong>
+            </span>
+          </a>
+        </li>
+        <li class="tabs-menu__item tabs-menu__item_inline">
+          <a href="https://habrahabr.ru/top/" class="tab-item ">
+            <span class="tab-item__value">
+              Лучшие&nbsp;
+              <strong class="counter"></strong>
+              
+            </span>
+          </a>
+        </li>
+        <li class="tabs-menu__item tabs-menu__item_inline">
+          <a href="https://habrahabr.ru/interesting/" class="tab-item tab-item_current">
+            <span class="tab-item__value">
+              Интересные&nbsp;
+              <strong class="counter"></strong>
+              
+            </span>
+          </a>
+        </li>
+    </ul>
+
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      <div class="posts_list">
+        <div class="posts shortcuts_items">
+          <%=render partial: "home/article", locals: {films: @films}%>
+
+
+
+
+          <%=render "home/middle_adwersting"%>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ <%=render partial: "home/article", locals: {films: @films}%>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        </div>
+
+        <div class="page-nav">
+
+	<ul class="next-prev">
+			<li><span>←</span>&nbsp;сюда</li>
+
+			<li><a title="На страницу вперед (Alt + →)" class="next" id="next_page" href="https://habrahabr.ru/page2/" rel="">туда</a>&nbsp;<span>→</span></li>
+	</ul>
+
+	<ul id="nav-pages">
+				<li><em>1</em></li>
+				<li><a><%= render_pagination_box(@films) %> </a></li>
+			<li><a title="Последняя страница" href="https://habrahabr.ru/page100/" rel=""><span>→</span></a></li>
+	</ul>
+</div>
+
+
+        <form action="https://habrahabr.ru/json/favorites/" method="post" id="edit_tags_form" class="hidden">
+  <input type="hidden" name="action" value="add">
+  <input type="hidden" name="ti" value="0">
+  <input type="hidden" name="tt" value="0">
+  <label>Пометьте топик понятными вам метками, если хотите</label>
+  <input type="text" name="tags_string" class="tags_string" autocomplete="off">
+  <div class="description">Метки лучше разделять запятой. Например: <i>общение, социальные сети, myspace.com, подростки, мердок</i></div>
+  <div class="buttons">
+  	<input type="submit" value="Сохранить" class="submit"> или <a href="https://habrahabr.ru/#" class="close" onclick="return close_edit_tags()">закрыть</a>
+ 	</div>
+</form>
+
+      </div>
+    </div>
+
+    <div class="sidebar_right js-sidebar_right">
+          <div class="xyz_wrapper is_visible">
+    <div class="xyz_wrapper_inner">
+      <span class="xyz_wrapper_text">Реклама помогает поддерживать и&nbsp;развивать наши сервисы<br><br><a href="https://habrahabr.ru/adblock/" target="_blank">[подробнее]</a></span>
+      <div class="no_please_one_one_one" style="min-height: 270px;">
+        <script type="text/javascript">
+          if (typeof(pr) == 'undefined') { var pr = Math.floor(Math.random() * 4294967295) + 1; }
+          if (typeof(document.referrer) != 'undefined') {
+            if (typeof(afReferrer) == 'undefined') {
+              afReferrer = encodeURIComponent(document.referrer);
+            }
+          } else {
+            afReferrer = '';
+          }
+          var addate = new Date();
+          var dl = encodeURIComponent(document.location);
+          var pr1 = Math.floor(Math.random() * 4294967295) + 1;
+
+          document.write('<div id="AdFox_banner_'+pr1+'" style="background:#fff;"><\/div>');
+          document.write('<div style="visibility:hidden; position:absolute;"><iframe id="AdFox_iframe_'+pr1+'" width=1 height=1 marginwidth=0 marginheight=0 scrolling=no frameborder=0><\/iframe><\/div>');
+
+          AdFox_getCodeScript(1,pr1,'//ads.adfox.ru/249077/prepareCode?pp=g&amp;ps=cgto&amp;p2=fjon&amp;pct=a&amp;plp=a&amp;pli=a&amp;pop=a&amp;pr=' + pr +'&amp;pt=b&amp;pd=' + addate.getDate() + '&amp;pw=' + addate.getDay() + '&amp;pv=' + addate.getHours() + '&amp;prr=' + afReferrer + '&amp;dl='+dl+'&amp;pr1='+pr1);
+        </script><div id="AdFox_banner_1678885372" style="width: 300px; height: 500px; position: relative;"><iframe id="adfoxHtml5_iframe_1678885372" marginwidth="0" marginheight="0" scrolling="no" frameborder="0" style="width: 300px; height: 500px;"></iframe></div><div style="visibility:hidden; position:absolute;"><iframe id="AdFox_iframe_1678885372" width="1" height="1" marginwidth="0" marginheight="0" scrolling="no" frameborder="0"></iframe></div>
+      </div>
+    </div>
+    <a href="https://special.habrahabr.ru/advertising/" class="firskill__label">Реклама</a>
+  </div>
+
+        
+
+  <div class="sidebar-block sidebar-block_top-hubs js-tophubs">
+    <h2 class="sidebar-block__title">Потоки</h2>
+    <ul class="content-list top-flows">
+        <li class="content-list__item top-flows__item">
+          <a href="https://habrahabr.ru/flows/develop/" class="content-list__item-link top-flows__item-title" onclick="if (typeof ga === &#39;function&#39;) { ga(&#39;send&#39;, &#39;event&#39;, &#39;tm_block&#39;, &#39;flows&#39;, &#39;Разработка&#39;); }">Разработка</a>
+          <strong class="top-flows__item-counter" title="Количество новых публикаций за 24 часа">+27</strong>
+        </li>
+        <li class="content-list__item top-flows__item">
+          <a href="https://habrahabr.ru/flows/design/" class="content-list__item-link top-flows__item-title" onclick="if (typeof ga === &#39;function&#39;) { ga(&#39;send&#39;, &#39;event&#39;, &#39;tm_block&#39;, &#39;flows&#39;, &#39;Дизайн&#39;); }">Дизайн</a>
+          <strong class="top-flows__item-counter" title="Количество новых публикаций за 24 часа">+2</strong>
+        </li>
+        <li class="content-list__item top-flows__item">
+          <a href="https://habrahabr.ru/flows/management/" class="content-list__item-link top-flows__item-title" onclick="if (typeof ga === &#39;function&#39;) { ga(&#39;send&#39;, &#39;event&#39;, &#39;tm_block&#39;, &#39;flows&#39;, &#39;Управление&#39;); }">Управление</a>
+          <strong class="top-flows__item-counter" title="Количество новых публикаций за 24 часа">+6</strong>
+        </li>
+        <li class="content-list__item top-flows__item">
+          <a href="https://habrahabr.ru/flows/marketing/" class="content-list__item-link top-flows__item-title" onclick="if (typeof ga === &#39;function&#39;) { ga(&#39;send&#39;, &#39;event&#39;, &#39;tm_block&#39;, &#39;flows&#39;, &#39;Маркетинг&#39;); }">Маркетинг</a>
+          <strong class="top-flows__item-counter" title="Количество новых публикаций за 24 часа">+1</strong>
+        </li>
+        <li class="content-list__item top-flows__item">
+          <a href="https://habrahabr.ru/flows/misc/" class="content-list__item-link top-flows__item-title" onclick="if (typeof ga === &#39;function&#39;) { ga(&#39;send&#39;, &#39;event&#39;, &#39;tm_block&#39;, &#39;flows&#39;, &#39;Разное&#39;); }">Разное</a>
+          <strong class="top-flows__item-counter" title="Количество новых публикаций за 24 часа">+2</strong>
+        </li>
+    </ul>
+  </div>
+
+          <div class="wrapper-sticky" style="display: block; height: 512px; width: auto; margin: auto; position: relative; float: none; left: auto; right: auto; top: auto; bottom: auto; vertical-align: top;"><div class="js-ad_sticky" style="width: 300px; top: 0px; bottom: auto; left: 0px; right: auto; position: absolute;"><div class="xyz_wrapper">
+  <div class="xyz_wrapper_inner">
+    <span class="xyz_wrapper_text">Реклама помогает поддерживать и&nbsp;развивать наши сервисы<br><br><a href="https://habrahabr.ru/adblock/" target="_blank">[подробнее]</a></span>
+
+    <!-- Яндекс.Директ -->
+    <div id="yandex_ad" style="background: #fff;"><yatag class="yap-yandex_ad-posterVertical" id="yap-yandex_ad-posterVertical"><yatag class="yap-layout yap-main yap-font-size yap-layout_type_medium yap-type-vertical yap-layout_block_vertical yap-layout_block_poster yap-layout_block_poster-vertical"><yatag class="yap-layout__logo yap-logo yap-logo-bg-color"><yatag class="yap-logo-block"><yatag class="yap-logo-block__position yap-logo-position"><a class="yap-logo-block__text yap-logo-text yap-logo-color yap-logo-bg-color" target="_blank" href="https://direct.yandex.ru/?partner">Яндекс.Директ</a></yatag><yatag class="yap-logo-block__arrow yap-logo-arrow"></yatag></yatag></yatag><yatag class="yap-layout__wrapper yap-list-wrapper yap-font-family yap-border-color"><table class="yap-layout__items yap-list"><tbody><tr><td data-id="1800047400" data-uniq-id="1464936283474" class="yap-layout__item yap-item yap-border-color yap-layout__item_nth_1 yap-layout__item_picture_true yap-layout__item_sticky-arrow_ yap-layout__item_short_"><yatag class="yap-layout__outer"><yatag class="yap-layout__bg "><yatag class="yap-layout__bg-img" style="background-image: url(//avatars-fast.yandex.net/get-direct/CHvJ26v8k_6fJaKACqv2Iw/wy150)"></yatag></yatag><yatag class="yap-layout__inner yap-item-inner"><yatag class="yap-layout__title"><yatag class="yap-title-block yap-title "><a href="https://an.yandex.ru/count/0OB4NZg7w7y40000ZhTr4dK5XP9p99K2cm5kGxS2Am68ibTKgGQ9ffFfBvZ__________m-Uk00000ITd5WMkloeJrxWnm0X2wPxYhYogBG6tBu9f888lRrUb-m5gW6beT5I2Rofei88tG7Ua2JqaRdM3MOCZxxs1oy9dxNVwsSAauy8cGn2Z9qmXhQGX9craEv_e9E7_Q-TC8QpaBFnj93kVzcj5W01sf0az9IIwGodWZceesrNbw7z6HDjtqUcUG6am00004aChlFZG5BQy5Ye0h2u4z6F1R41ig1I00Avd5WMk_qP4stVHwPv0S7__________m_5Zm_DkUvKj0REkWcaWWZJ0jlzMMpWvaUcUG7VZmXw8G00?test-tag=2391820241&amp;stat-id=1073741832" target="_blank" class="yap-title-block__text yap-title-text yap-title-font-size yap-title-color yap-title-hover-color">Microsoft All in Cloud</a></yatag>&nbsp;<yatag class="yap-layout__age"><yatag class="yap-age">18+</yatag></yatag><yatag class="yap-layout__title-domain"><a class="yap-domain yap-domain-text" target="_blank" href="https://an.yandex.ru/count/0OB4NZg7w7y40000ZhTr4dK5XP9p99K2cm5kGxS2Am68ibTKgGQ9ffFfBvZ__________m-Uk00000ITd5WMkloeJrxWnm0X2wPxYhYogBG6tBu9f888lRrUb-m5gW6beT5I2Rofei88tG7Ua2JqaRdM3MOCZxxs1oy9dxNVwsSAauy8cGn2Z9qmXhQGX9craEv_e9E7_Q-TC8QpaBFnj93kVzcj5W01sf0az9IIwGodWZceesrNbw7z6HDjtqUcUG6am00004aChlFZG5BQy5Ye0h2u4z6F1R41ig1I00Avd5WMk_qP4stVHwPv0S7__________m_5Zm_DkUvKj0REkWcaWWZJ0jlzMMpWvaUcUG7VZmXw8G00?test-tag=2391820241&amp;stat-id=1073741832"><img class="yap-favicon" src="./Интересные публикации _ Хабрахабр_files/microsoft.com" alt=""><yatag class="yap-domain__text">microsoft.<wbr>com</yatag></a></yatag><yatag class="yap-layout__arrow"><svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="11px" height="7px" viewBox="0 0 12 7"><path d="M11,1.4L5.5,7L0,1.4L0.5,0.875L5.5,6L10.5,0.875L11,1.4z"></path></svg></yatag><yatag class="yap-layout__arrow yap-layout__arrow_roll-up"><svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="11px" height="7px" viewBox="0 0 12 7"><path d="M11,1.4L5.5,7L0,1.4L0.5,0.875L5.5,6L10.5,0.875L11,1.4z"></path></svg></yatag></yatag><yatag class="yap-layout__content"><yatag class="yap-layout__picture " style="background-image: url(//avatars-fast.yandex.net/get-direct/CHvJ26v8k_6fJaKACqv2Iw/wy150) !important;margin-left: -133.5px !important;margin-top: -71.5px !important;width: 267px !important;height: 150px; !important"></yatag><yatag class="yap-layout__slider" style="min-height: 164px;"><yatag class="yap-layout__slider-inner"><yatag class="yap-layout__body yap-text"><a class="yap-body-text yap-text-color"><wbr>Подберите <b>облачные</b> инструменты для&nbsp;вашего бизнеса. Загружайте книгу!</a></yatag></yatag></yatag></yatag><yatag class="yap-layout__adtune"><yatag class="yap-adtune yap-adtune_touch_false yap-adtune_oldie_false"><yatag class="yap-adtune__button yap-adtune-button"><yatag class="yap-adtune__image"><svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="8px" height="8px" viewBox="0 0 14 14"><polygon points="14,0.7 13.3,0 7,6.299 0.7,0 0,0.7 6.3,7 0,13.299 0.7,14 7,7.7 13.3,14 14,13.299 7.7,7"></polygon></svg></yatag><yatag class="yap-adtune__tooltip"><yatag class="yap-adtune__tooltip-text">Скрыть&nbsp;объявление</yatag></yatag></yatag></yatag></yatag></yatag><yatag class="yap-layout__adtune-message"><yatag class="yap-adtune-message"><table class="yap-adtune-message__table"><tbody><tr><td class="yap-adtune-message__text">Спасибо. Объявление скрыто.</td></tr></tbody></table></yatag></yatag></yatag></td></tr><tr><td data-id="1792547566" data-uniq-id="1464936289324" class="yap-layout__item yap-item yap-border-color yap-layout__item_nth_2 yap-layout__item_picture_true yap-layout__item_sticky-arrow_ yap-layout__item_short_"><yatag class="yap-layout__outer"><yatag class="yap-layout__bg "><yatag class="yap-layout__bg-img" style="background-image: url(//avatars-fast.yandex.net/get-direct/s1uK5dArmKEGQfxTQcgCtg/y150)"></yatag></yatag><yatag class="yap-layout__inner yap-item-inner"><yatag class="yap-layout__title"><yatag class="yap-title-block yap-title yap-title-block_highlighted"><a href="https://an.yandex.ru/count/0OB4NbEyaEa40000ZhTr4dK5XP9p99K2cm5kGxS2Am4qYBzAwN44YPU6F9Z__________m-Uk00000ITgccX4hhyg4zUuCS08GkcHeg-he6j1jop9k5x2Bswp9xe1Qe1fQYpoWYyeIyN1jq1tf0az96vrWrc38-wfH853v-ZvhDPauy8cGn2Z9DtLRQSencrcBeLe9oTeQ-JTrMpd1Ofj9Yw5TcRFwFQa84fb9gj4gU24QYnizfq1g7z6HDjtqUcUG6am00004aChlFZG5BQy5Ye0h2u4z6F1R41ig1I00AvgccX4hlz6HDjtqUcUG71__________yFnOyFpRskWQq6ph0cuNi8qmBR_LbiuEP7fda1tuy8Uo40?test-tag=3465562065&amp;stat-id=1073741832" target="_blank" class="yap-title-block__text yap-title-text yap-title-font-size yap-title-color yap-title-hover-color">Обучение <b>визуализации</b> интерьера.</a></yatag>&nbsp;<yatag class="yap-layout__age"><yatag class="yap-age">18+</yatag></yatag><yatag class="yap-layout__title-domain"><a class="yap-domain yap-domain-text" target="_blank" href="https://an.yandex.ru/count/0OB4NbEyaEa40000ZhTr4dK5XP9p99K2cm5kGxS2Am4qYBzAwN44YPU6F9Z__________m-Uk00000ITgccX4hhyg4zUuCS08GkcHeg-he6j1jop9k5x2Bswp9xe1Qe1fQYpoWYyeIyN1jq1tf0az96vrWrc38-wfH853v-ZvhDPauy8cGn2Z9DtLRQSencrcBeLe9oTeQ-JTrMpd1Ofj9Yw5TcRFwFQa84fb9gj4gU24QYnizfq1g7z6HDjtqUcUG6am00004aChlFZG5BQy5Ye0h2u4z6F1R41ig1I00AvgccX4hlz6HDjtqUcUG71__________yFnOyFpRskWQq6ph0cuNi8qmBR_LbiuEP7fda1tuy8Uo40?test-tag=3465562065&amp;stat-id=1073741832"><img class="yap-favicon" src="./Интересные публикации _ Хабрахабр_files/ivannikitin.ru" alt=""><yatag class="yap-domain__text">ivannikitin.<wbr>ru</yatag></a></yatag><yatag class="yap-layout__arrow"><svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="11px" height="7px" viewBox="0 0 12 7"><path d="M11,1.4L5.5,7L0,1.4L0.5,0.875L5.5,6L10.5,0.875L11,1.4z"></path></svg></yatag><yatag class="yap-layout__arrow yap-layout__arrow_roll-up"><svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="11px" height="7px" viewBox="0 0 12 7"><path d="M11,1.4L5.5,7L0,1.4L0.5,0.875L5.5,6L10.5,0.875L11,1.4z"></path></svg></yatag></yatag><yatag class="yap-layout__content"><yatag class="yap-layout__picture " style="background-image: url(//avatars-fast.yandex.net/get-direct/s1uK5dArmKEGQfxTQcgCtg/y150) !important;margin-left: -100px !important;margin-top: -71.5px !important;width: 200px !important;height: 150px; !important"></yatag><yatag class="yap-layout__slider" style="min-height: 164px;"><yatag class="yap-layout__slider-inner"><yatag class="yap-layout__body yap-text"><a class="yap-body-text yap-text-color"><wbr>3D Max <b>визуализация</b> с&nbsp;доходом 250т.р. Возможность работать у&nbsp;нас в&nbsp;команде!</a></yatag><yatag class="yap-layout__sitelinks"><yatag class="yap-sitelinks"><a class="yap-sitelinks__link yap-sitelink-text" target="_blank" href="https://an.yandex.ru/count/0OB4Nl6fiue40000ZhTr4dK5XP9p99K2cm5kGxS2Am4qYBzAwN44YPU6F9Z__________m-Uk00000ITgccX4hhyg4zUuCS08GkcHeg-he6j1jop9k5x2Bswp9xe1Qe6fQYpoWYyeIyN1jq1tf0az96vrWrc38-wfH853v-ZvhDPauy8cGn2Z9DtLRQSencrcBeLe9oTeQ-JTrMpd1Ofj9Yw5TcRFwFQa84fb9gj4gU24QYnizfq1g7z6HDjtqUcUG6am00004aChlFZG5BQy5Ye0h2u4z6F1R41ig1I00AvgccX4hlz6HDjtqUcUG71__________yFnOyFpRskWQq6ph0cuNi8qmBR_LbiuEP7fda1tuy8Uo40?test-tag=3465562065&amp;stat-id=1073741832">Бесплатный Мастер-класс</a><a class="yap-sitelinks__link yap-sitelink-text" target="_blank" href="https://an.yandex.ru/count/0OB4Ncxoymq40000ZhTr4dK5XP9p99K2cm5kGxS2Am4qYBzAwN44YPU6F9Z__________m-Uk00000ITgccX4hhyg4zUuCS08GkcHeg-he6j1jop9k5x2Bswp9xe1Qe8fQYpoWYyeIyN1jq1tf0az96vrWrc38-wfH853v-ZvhDPauy8cGn2Z9DtLRQSencrcBeLe9oTeQ-JTrMpd1Ofj9Yw5TcRFwFQa84fb9gj4gU24QYnizfq1g7z6HDjtqUcUG6am00004aChlFZG5BQy5Ye0h2u4z6F1R41ig1I00AvgccX4hlz6HDjtqUcUG71__________yFnOyFpRskWQq6ph0cuNi8qmBR_LbiuEP7fda1tuy8Uo40?test-tag=3465562065&amp;stat-id=1073741832">Ведущий: Иван Никитин</a><a class="yap-sitelinks__link yap-sitelink-text" target="_blank" href="https://an.yandex.ru/count/0OB4NjQXwhe40000ZhTr4dK5XP9p99K2cm5kGxS2Am4qYBzAwN44YPU6F9Z__________m-Uk00000ITgccX4hhyg4zUuCS08GkcHeg-he6j1jop9k5x2Bswp9xe1QeAfQYpoWYyeIyN1jq1tf0az96vrWrc38-wfH853v-ZvhDPauy8cGn2Z9DtLRQSencrcBeLe9oTeQ-JTrMpd1Ofj9Yw5TcRFwFQa84fb9gj4gU24QYnizfq1g7z6HDjtqUcUG6am00004aChlFZG5BQy5Ye0h2u4z6F1R41ig1I00AvgccX4hlz6HDjtqUcUG71__________yFnOyFpRskWQq6ph0cuNi8qmBR_LbiuEP7fda1tuy8Uo40?test-tag=3465562065&amp;stat-id=1073741832">Начало уже завтра</a></yatag></yatag></yatag></yatag></yatag><yatag class="yap-layout__adtune"><yatag class="yap-adtune yap-adtune_touch_false yap-adtune_oldie_false"><yatag class="yap-adtune__button yap-adtune-button"><yatag class="yap-adtune__image"><svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="8px" height="8px" viewBox="0 0 14 14"><polygon points="14,0.7 13.3,0 7,6.299 0.7,0 0,0.7 6.3,7 0,13.299 0.7,14 7,7.7 13.3,14 14,13.299 7.7,7"></polygon></svg></yatag><yatag class="yap-adtune__tooltip"><yatag class="yap-adtune__tooltip-text">Скрыть&nbsp;объявление</yatag></yatag></yatag></yatag></yatag></yatag><yatag class="yap-layout__adtune-message"><yatag class="yap-adtune-message"><table class="yap-adtune-message__table"><tbody><tr><td class="yap-adtune-message__text">Спасибо. Объявление скрыто.</td></tr></tbody></table></yatag></yatag></yatag></td></tr></tbody></table></yatag></yatag></yatag></div>
+    
+
+
+  </div>
+  <a href="https://special.habrahabr.ru/advertising/" class="firskill__label">Реклама</a>
+</div>
+</div></div>
+    </div>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

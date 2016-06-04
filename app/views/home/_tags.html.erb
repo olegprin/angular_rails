@@ -1,0 +1,8 @@
+<%if @all_tags.present?%>
+ <%@all_tags.map do |tag|%>
+  <div class="all_tag">
+    <li><%= link_to "#{tag}", results_tags_path(tag)%></li>
+  </div>
+<%end%>
+
+<%end%>
