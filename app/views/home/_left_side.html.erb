@@ -1,11 +1,10 @@
- <div class="sidebar">
-        <div class="clr"></div>
-        <div class="gadget">
-          <h2 class="star"><span>Latest</span> Articles</h2>
-          <div class="clr"></div>
-          <ul class="sb_menu">
-            <div class="img"><%= link_to image_tag(film.uploaded_file.url, width: 200, height: 289, class: "fl"), film_path(film)%></div>
-          </ul>
-        </div>
-       
-      </div>
+<div id="navbar" style="bottom: 0px;" class="fixed">
+  <div class="nav_panel">
+    <a><%=link_to "", root_path, class: "logo"%></a>
+    <%if user_signed_in?%>
+      <a><%=link_to "Выйти", destroy_user_session_path, :method => :delete, class: "tab tab_login", id: "login"%><span class="g-icon g-icon-lock"></span></a> 
+          <%else%>
+      <a><%=link_to "Войти", new_user_session_path, class: "tab tab_login", id: "login"%><span class="g-icon g-icon-lock"></span></a> 
+    <%end%> 
+  </div>
+</div>

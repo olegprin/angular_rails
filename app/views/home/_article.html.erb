@@ -16,12 +16,14 @@
     </div>
 
     <div class="post__body post__body_crop ">
-      <div class="content html_format"><br>
-        <%= link_to image_tag(film.uploaded_file.url, width: 500, height: 289), film_path(film)%><br>
-        <br>
-       <%=sanitize(film.description)%><br>
+      <div class="content html_format_image">
+        <%= link_to image_tag(film.uploaded_file.url, width: 500, height: 289), film_path(film)%>
       </div>
-      <div class="buttons" style="padding: 20px 0 0;">
+      <div class="content html_format_article"> 
+        <%=sanitize(film.description)%>
+      </div>
+      </div>
+      <div class="buttons" style="padding: 5px;">
          <a><%= ui_button 'read', "Читать дальше", film_path(film) %> </a>
       </div>
     </div>

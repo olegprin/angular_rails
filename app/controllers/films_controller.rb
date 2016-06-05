@@ -11,10 +11,10 @@ class FilmsController < ApplicationController
   respond_to :html, :js, :json
   # GET /films
   # GET /films.json
- def index
-  @films = Film.where(send_new_film: false).paginate(:page => params[:page], :per_page => Configurable['films_per_page'])
+  def index
+    @films = Film.where(send_new_film: false).paginate(:page => params[:page], :per_page => Configurable['films_per_page'])
     render "all_film"
- end 
+  end 
   # GET /films/1
   # GET /films/1.json
   def show
@@ -47,22 +47,17 @@ class FilmsController < ApplicationController
   def new
     @film = Film.new
    @film.tags.build
-    @active="active"
+    @active="current"
 
   end
-  
-  def show_modal
-    @user=User.find(@film.user_id)
-    @info=@user.info
-    respond_modal_with @film
-  end  
+   
   # GET /films/1/edit
   def edit
      
   end
   
   def set_active
-    @active="active"
+    @active="current"
   end
     
   def create
@@ -107,33 +102,28 @@ class FilmsController < ApplicationController
 
   def support 
     @films = Film.where(["category LIKE ?", "Horror"]).paginate(:page => params[:page], :per_page => Configurable['blogs_per_page'])
-    @active_support="active"
+    @active_support="current"
   end 
 
-  def other
-    @films = Film.where(category: ["Other", "Другое"]).paginate(:page => params[:page], :per_page => Configurable['blogs_per_page'])
-    render "all_film" 
-  end 
-  
   def blog
-    @films=current_user.films.where(send_new_film: false).paginate(:page => params[:page], :per_page => Configurable['blogs_per_page']) 
-    @film=Film.first
+    @films_first=current_user.films.where(send_new_film: false).paginate(:page => params[:page], :per_page => Configurable['blogs_per_page']) 
+    @films_first=Film.first
     if AllTag.first.present?
       @all_tags=Array(AllTag.first.all_list.split(","))
     end
-    if @film.present?
-      @user=User.find(@film.user_id)
+    if @films_first.present?
+      @user=User.find(@films_first.user_id)
       @info=@user.info
-      @commentable=@film
+      @commentable=@films_first
     end
-    @active_blog="active"
+    @active_blog="current"
   end 
 
 
 
   def not_published
-    @films = current_user.films.where(send_new_film: true).paginate(:page => params[:page], :per_page => Configurable['blogs_per_page'])
-    @active_about_us="active"
+    @films_first = current_user.films.where(send_new_film: true).paginate(:page => params[:page], :per_page => Configurable['blogs_per_page'])
+    @active_about_us="current"
   end 
   
   def top_rated
@@ -160,7 +150,7 @@ class FilmsController < ApplicationController
 
   def contact_us 
     @messagestoadministrator=Messagestoadministrator.new
-    @active_contact_us="active"
+    @active_contact_us="current"
   end  
 
 

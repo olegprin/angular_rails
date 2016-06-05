@@ -22,7 +22,13 @@ class HomeController < ApplicationController
   end
     
   def all_film
-    @films = Film.where(send_new_film: false).paginate(:page => params[:page], :per_page => Configurable[:blogs_per_page])
+    @films = Film.where(send_new_film: false).paginate(:page => params[:page], :per_page => Configurable['blogs_per_page'])
+    @count=@films.count
+    @films_first=@films.paginate(:page => params[:page], :per_page => Configurable['blogs_per_page'])
+    if @count>2
+      @films_last=@films[3..@count].paginate(:page => params[:page], :per_page => Configurable['blogs_per_page'])
+    end
+
     all_tag=AllTag.first
     if all_tag.present?
       @all_tags=Array(all_tag.take_all_tag)
