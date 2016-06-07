@@ -1,0 +1,19 @@
+<DOCTYPE>
+<html>
+  <head>
+    <%=render "rss"%>
+    <title> 
+      Timeorg - 
+      <%= yield(:title) || "the blog"%>
+    </title>
+ 	 	<%= render partial: "shared/down"%>
+  	<%= render partial: "shared/head" %>
+  	<meta name='description'
+      content='<%= yield_meta_tag(:description, 'Blog about rails') %>' />
+		<meta name='keywords'
+      content='<%= yield_meta_tag(:keywords, 'defaults,ruby,rails, blog') %>' />
+  </head>
+
+
+	<%= yield%>
+</html>

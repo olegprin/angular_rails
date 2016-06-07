@@ -1,8 +1,11 @@
 <!DOCTYPE html>
 
 <html class="fonts-loaded">
-
-  <%=render "home/head"%>
+  <head>
+    <% title @film.title %>
+    <% meta_tag :description, @film.title %>
+    <% meta_tag :keywords, @film.language %>
+  </head>
   <body>
     <div class="layout_inner">
       <div id="layout">

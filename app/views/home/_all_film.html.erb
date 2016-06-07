@@ -1,8 +1,12 @@
 <!DOCTYPE html>
 <!-- saved from url=(0021)https://habrahabr.ru/ -->
-<html class="fonts-loaded"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-  <%=render "home/head"%>
-</head>
+<html class="fonts-loaded">
+  <head>
+    <% title "Все статьти" %>
+    <% meta_tag :description, "All article on timeorg blog" %>
+    <% meta_tag :keywords, AllTag.first.all_list %>
+    <%= render "home/adversting"%>
+  </head>
 
   <body>
     <div class="layout_inner">

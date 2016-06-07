@@ -21,7 +21,8 @@ class Film < ActiveRecord::Base
   accepts_nested_attributes_for :tags
   #after_create :send_film_to_user
   has_many :tags, dependent: :destroy
-  
+  scope :can_publish, -> {where(send_new_film: false)}
+
   if I18n.locale == :en 
     CATEGORY = %w[Action Comedy History Other] 
   else I18n.locale == :ru 
@@ -29,14 +30,26 @@ class Film < ActiveRecord::Base
   end    
   
   @model_of_attachment='uploaded_file'.parameterize.underscore.to_sym
-
+  
   
 
   include ValidationsForPicture
 
 
-    
-  def create_tags
+  def self.can_publish_sort
+    can_publish.order("created_at DESC")
+  end  
+  
+  def self.can_publish_search(parameter)
+    can_publish.search_everywhere(parameter)
+  end  
+  
+  def self.can_publish_paginate
+    can_publish.paginate(:page => params[:page], :per_page => Configurable['films_per_page'])
+  end 
+
+  def
+   create_tags
     if self.send_new_film==false
     
       all_tag=AllTag.first  

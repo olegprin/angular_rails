@@ -26,8 +26,8 @@ class FilmsController < ApplicationController
     @user=User.find(@film.user_id)
     @info=@user.info
     
-      @commentable=@film
-   @comment_count=@commentable.comments.paginate(
+    @commentable=@film
+    @comment_count=@commentable.comments.paginate(
        :page => params[:page],
        :per_page => Configurable[:blogs_per_page]
     )
@@ -46,9 +46,8 @@ class FilmsController < ApplicationController
   # GET /films/new
   def new
     @film = Film.new
-   @film.tags.build
+    @film.tags.build
     @active="current"
-
   end
    
   # GET /films/1/edit
@@ -101,12 +100,11 @@ class FilmsController < ApplicationController
   end
 
   def support 
-    @films = Film.where(["category LIKE ?", "Horror"]).paginate(:page => params[:page], :per_page => Configurable['blogs_per_page'])
     @active_support="current"
   end 
 
   def blog
-    @films=current_user.films.where(send_new_film: false).paginate(:page => params[:page], :per_page => Configurable['blogs_per_page']) 
+    @films=current_user.films.can_publish_paginates
     @films_down=@films.sample(4)
     all_tag=AllTag.first
     if all_tag.present?
@@ -116,8 +114,7 @@ class FilmsController < ApplicationController
   end 
 
   def not_published
-    @films = Film.where(send_new_film: true).paginate(:page => params[:page], :per_page => Configurable['blogs_per_page'])
-    
+    @films = Film.can_publish_paginate
     @films_down=@films.sample(4)
     all_tag=AllTag.first
     if all_tag.present?
@@ -128,21 +125,20 @@ class FilmsController < ApplicationController
   
   def top_rated
     d=Voice.where('votable_type = ? AND vote_flag = ?', "Film", true)
-      @a=d.order('sum_voices DESC')
-   @films=[]
-      @a.each do |c| 
-      s=Film.find(c.votable_id)
-        @films<<s
-      
-      end
-      @films
+    @a=d.order('sum_voices DESC')
+    @films=[]
+    @a.each do |c| 
+    s=Film.find(c.votable_id)
+      @films<<s
+    end
+    @films
     #@top_rated=params[:films][:top_rated]  
     #@films = Film.where(id: (Voice.where(["votable_type LIKE ?", "Film"])).id).paginate(:page => params[:page], :per_page => 8)
     render "all_film"
   end
 
   def other
-    @films = Film.where(send_new_film: false).sample(Film.count).paginate(:page => params[:page], :per_page => Configurable['blogs_per_page'])
+    @films = Film.can_publish.sample(Film.count).paginate(:page => params[:page], :per_page => Configurable['blogs_per_page'])
     @films_down=@films.sample(4)
     all_tag=AllTag.first
     if all_tag.present?
@@ -169,9 +165,8 @@ class FilmsController < ApplicationController
   
   private
   
-
   def all_tags
-    @films = Film.where(send_new_film: false).paginate(:page => params[:page], :per_page => Configurable['blogs_per_page'])
+    @films = Film.can_publish_paginate
     @films_down=@films.sample(4)
     all_tag=AllTag.first
     if all_tag.present?
@@ -187,17 +182,15 @@ class FilmsController < ApplicationController
     end
   end
     # Use callbacks to share common setup or constraints between actions.
-  def set_film
-      
-      @film=Film.find_by_slug(params[:id]) 
-      if @film.send_new_film==false
-        @film
-      elsif @film.send_new_film==true && user_created_article?
-        @film
-      elsif
-         redirect_to root_path
-      end   
-
+  def set_film 
+    @film=Film.find_by_slug(params[:id]) 
+    if @film.send_new_film==false
+      @film
+    elsif @film.send_new_film==true && user_created_article?
+      @film
+    elsif
+      redirect_to root_path
+    end   
   end
 
   
