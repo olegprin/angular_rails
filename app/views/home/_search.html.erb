@@ -1,0 +1,8 @@
+<div class="page-header page-header_inline">
+  <h1 class="page-header__title page-header__title_inline">Публикации
+  </h1>
+    <%= form_tag results_path, method: :get, role: 'search', class: "search-form" do %>
+    <%= text_field_tag :query, params[:query], class: "search-form__field", placeholder: "Поиск" %>
+    <%= submit_tag "Search", name: nil, class: "search-form__button icon_search" %>
+  <% end %>
+</div>

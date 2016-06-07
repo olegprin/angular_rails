@@ -1,0 +1,22 @@
+<%=title("Listing messages")%>
+
+
+
+
+
+
+    <%@messagestoadministrators.each do |messagestoadministrator|%>
+    
+
+
+
+
+<div class="bs-example" data-example-id="simple-table"> <table class="table"> <caption>Optional table caption.</caption> <thead> <tr> <th>#</th> <th>Name</th> <th>Email</th> <th>Message</th> <th>Action</th></tr> </thead> <tbody> <tr> <th scope="row">1</th> <td><%=messagestoadministrator.name%></td> <td>  <%=messagestoadministrator.email%></td> <td>     <%= messagestoadministrator.message%></td> <td>          
+
+        <%= link_to 'Show', messagestoadministrator_path(messagestoadministrator)%>
+        <%= link_to 'Edit', edit_messagestoadministrator_path(messagestoadministrator)%>
+        <%= link_to 'Destroy', messagestoadministrator, :method => :delete, :data => { :confirm => 'Are you sure?' }%>
+</td></tr> 
+</tbody> </table> </div>
+
+<%end%>

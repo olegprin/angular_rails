@@ -1,0 +1,45 @@
+  <div class="fbg">
+    <div class="fbg_resize">
+      <div class="col c1">
+
+
+        <h2><span>Recent</span> Articles</h2>
+        <div class="row">
+         <%@films_latest.each do |films_latest|%>
+        
+             <div class="col-md-4">
+            
+            <%=link_to image_tag(films_latest.uploaded_file, width: "75", height: "75"), film_path(films_latest)%>
+           </div> 
+
+            <%end%>
+          </div> 
+      </div>
+      <div class="col c2">
+        <h2><span>Services</span> Overview</h2>
+          <%=Configurable.services%>
+        </p>
+      </div>
+      <div class="col c3">
+        <h2><span>Contact</span> Us</h2>
+        <p><%=Configurable.contact%></p>
+        <p class="contact_info"> <span>Address:</span> <%=Configurable.adress%><br />
+          <span>Telephone:</span> <%=Configurable.telephone%> <br />
+          <span>FAX:</span><%=Configurable.fax%> <br />
+          <span>Others:</span> <%=Configurable.others_telephone%><br />
+          <span>E-mail:</span> <%=Configurable.admin_notification_address%></a> </p>
+      </div>
+      <div class="clr"></div>
+    </div>
+  </div>
+  <div class="footer">
+    <div class="footer_resize">
+      <p class="lf">Copyright &copy; <%=Configurable.domain%></a>. All Rights Reserved</p>
+      <p class="rf">Design by <a target="_blank" href="https://www.linkedin.com/in/olstarosvitski?trk=hp-identity-name"><%=Configurable.designed_by%></a></p>
+      <div style="clear:both;"></div>
+    </div>
+  </div>
+</div>
+</body>
+</html>
+s

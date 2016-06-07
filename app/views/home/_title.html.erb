@@ -1,0 +1,12 @@
+<%if Film.present?%>
+  <div class="title_head">
+  	<a><%= link_to "#{film.title}", film_path(film) %></a>
+  </div>
+  <div class="film_created">Posted on <%=film.created_at%> by <%=link_to "#{user_ret_email(film)}", info_path(info_who_created(film))%></div>
+  <p>Filed under 
+  <%=delete_symblol(film.language).join(",")%> 
+  <%=link_to "Comments #{film.comments.count}", film_path(film)%>
+  <%=link_to "edit", edit_film_path(film)%>
+	<%= link_to 'delete', @film, method: :delete, data: { confirm: 'Are you sure?' } %> </p>
+
+<%end%>  

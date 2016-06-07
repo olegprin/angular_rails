@@ -1,0 +1,24 @@
+<ul class="tabs-menu tabs-menu_habrahabr">
+    <li class="tabs-menu__item tabs-menu__item_inline">
+      <a><%=link_to "Все подряд", other_films_path, class: "tab-item"%><a>
+        <span class="tab-item__value">
+          <strong class="counter"></strong>
+          <strong class="counter_new"></strong>
+        </span>
+      </a>
+    </li>
+    <li class="tabs-menu__item tabs-menu__item_inline">
+        <span class="tab-item__value">
+          <a><%=link_to "Лучшие", other_films_path, class: "tab-item"%><a>
+          <strong class="counter"></strong>
+        </span>
+      </a>
+    </li>
+    <li class="tabs-menu__item tabs-menu__item_inline">
+      <a><%=link_to "Интересные", other_films_path, class: "tab-item", class: "tab-item tab-item_current"%></a>
+        <span class="tab-item__value">
+          <strong class="counter"></strong>
+        </span>
+      </a>
+    </li>
+</ul>

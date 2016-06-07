@@ -1,0 +1,126 @@
+       <div class="clear"></div>
+          <div class="footer_panel">
+            <div id="footer">
+  <dl>
+    <dd><a href="https://habrahabr.ru/auth/login/">Войти</a></dd>
+    <dd><a href="https://habrahabr.ru/auth/register/">Регистрация</a></dd>
+  </dl>
+  <dl>
+    <dt>Разделы</dt>
+    <dd><a href="https://habrahabr.ru/posts/top/">Публикации</a></dd>
+    <dd><a href="https://habrahabr.ru/hubs/">Хабы</a></dd>
+    <dd><a href="https://habrahabr.ru/companies/">Компании</a></dd>
+    <dd><a href="https://habrahabr.ru/users/">Пользователи</a></dd>
+    <dd><a href="https://toster.ru/?_aa=press_anykey">Q&amp;A</a></dd>
+    <dd><a href="https://habrahabr.ru/sandbox/">Песочница</a></dd>
+  </dl>
+  <dl>
+    <dt>Инфо</dt>
+    <dd><a href="https://habrahabr.ru/info/about/">О сайте</a></dd>
+    <dd><a href="https://habrahabr.ru/info/help/rules/">Правила</a></dd>
+    <dd><a href="https://habrahabr.ru/info/help/">Помощь</a></dd>
+    <dd><a href="https://habrahabr.ru/info/agreement/">Соглашение</a></dd>
+  </dl>
+  <dl>
+    <dt>Услуги</dt>
+    <dd><a href="https://special.habrahabr.ru/advertising/">Реклама</a></dd>
+      <dd><a href="https://special.habrahabr.ru/">Спецпроекты</a></dd>
+      <dd><a href="https://special.habrahabr.ru/corporate/">Тарифы</a></dd>
+      <dd><a href="https://special.habrahabr.ru/content/">Контент</a></dd>
+      <dd><a href="https://special.habrahabr.ru/workshops/">Вебинары</a></dd>
+  </dl>
+  <dl>
+    <dt>Разное</dt>
+    <dd><a href="https://habrahabr.ru/apps/">Приложения</a></dd>
+    <dd><a href="https://special.habrahabr.ru/google/lab/" target="_blank">Тест-драйв</a></dd>
+    <dd><a href="https://special.habrahabr.ru/hello_startup/habrahabr/" target="_blank">Помощь стартапам</a></dd>
+      <dd><a href="https://special.habrahabr.ru/#hr">Работа в IT</a></dd>
+  </dl>
+  <div class="copyright">
+    <div class="about">
+      <a href="https://tmtm.ru/">© TM</a>
+      <br><br>
+      <a href="https://habrahabr.ru/feedback/">Служба поддержки</a><br><br>
+          <a href="https://m.habrahabr.ru/?mobile=yes">Мобильная версия</a><br><br>
+      <div class="social_accounts">
+        <a href="https://twitter.com/habrahabr" class="tw"></a>
+        <a href="https://www.facebook.com/habrahabr.ru" class="fb"></a>
+        <a href="https://vk.com/habr" class="vk"></a>
+        <!-- <a href="" class="gp"></a> //-->
+      </div>
+    </div>
+  </div>
+</div>
+          </div>
+        </div>
+      </div>
+    </div>
+      <script type="text/javascript" src="./Интересные публикации _ Хабрахабр_files/jquery.cookie.js"></script>
+      <script type="text/javascript">
+        $(document).ready( function(){
+          window.tmidLogin = function(){ return false; };
+          if( $.cookie('tmid_no_check') == undefined ) {
+            var expire = new Date();
+            expire.setMinutes(expire.getMinutes() + 10 );
+            $.cookie('tmid_no_check', 1, { expires: expire } );
+            $.getScript("https://id.tmtm.ru/checklogin/", function(){
+              if( window.tmidLogin() ) {
+                  var href = $('#login').attr('href')+'?checklogin=true';
+                  if( href !== undefined ) {
+                      window.location.href = href;
+                  }
+              }
+            });
+          }
+        });
+      </script>
+    <script type="text/javascript">
+  // global vars
+  var g_base_url = 'habrahabr.ru';
+  var g_show_xpanel = false;
+  var g_base_fullurl = 'https://habrahabr.ru/';
+  var g_is_guest = false;
+</script> 
+      <script type="text/javascript" src="./Интересные публикации _ Хабрахабр_files/shortcuts.js"></script>
+    <script type="text/javascript" src="./Интересные публикации _ Хабрахабр_files/global_footer_main.js"></script>
+    
+    
+<!-- Yandex.Metrika counter -->
+<script type="text/javascript">
+(function (d, w, c) {
+    (w[c] = w[c] || []).push(function() {
+        try {
+            if (typeof (_yaparams) != 'undefined') {
+                w.yaCounter24049213 = new Ya.Metrika({id:24049213,
+                    webvisor:true,
+                    clickmap:true,
+                    trackLinks:true,
+                    accurateTrackBounce:true,
+                    params:_yaparams});
+            } else {
+                w.yaCounter24049213 = new Ya.Metrika({id:24049213,
+                    webvisor:true,
+                    clickmap:true,
+                    trackLinks:true,
+                    accurateTrackBounce:true});
+            }
+        } catch(e) { }
+    });
+    var n = d.getElementsByTagName("script")[0],
+        s = d.createElement("script"),
+        f = function () { n.parentNode.insertBefore(s, n); };
+    s.type = "text/javascript";
+    s.async = true;
+    s.src = (d.location.protocol == "https:" ? "https:" : "http:") + "//mc.yandex.ru/metrika/watch.js";
+    if (w.opera == "[object Opera]") {
+        d.addEventListener("DOMContentLoaded", f, false);
+    } else { f(); }
+})(document, window, "yandex_metrika_callbacks");
+</script>
+<noscript>&lt;div&gt;&lt;img src="//mc.yandex.ru/watch/24049213" style="position:absolute; left:-9999px;" alt="" /&gt;&lt;/div&gt;</noscript>
+<!-- /Yandex.Metrika counter -->
+    
+    
+    <!-- Хабр не резиновый! -->
+  
+<div id="AutocompleteContainter_e55cd" style="position: absolute; z-index: 9999; top: 0px; left: 0px;"><div class="autocomplete-w1"><div class="autocomplete" id="Autocomplete_e55cd" style="display: none; width: 300px; max-height: 400px;"></div></div></div><div id="AutocompleteContainter_b23d4" style="position: absolute; z-index: 9999; top: 2px; left: 0px;"><div class="autocomplete-w1"><div class="autocomplete" id="Autocomplete_b23d4" style="display: none; width: 300px; max-height: 400px;"></div></div></div><iframe src="./Интересные публикации _ Хабрахабр_files/ch2.html" style="width: 10px; height: 10px; position: absolute; top: -10000px; left: -10000px;"></iframe></body></html>

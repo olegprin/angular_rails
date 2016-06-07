@@ -1,0 +1,181 @@
+# This file controls what config variables you want to be able to allow your users
+# to set, as well as those you'll be able to access from within the application.
+# 
+# If you want to be able to access a string config[:site_title], for example:
+#   
+blogs_per_page:
+  name: blogs_per_page
+  type: integer
+  default: 3
+
+latest_per_page:
+  name: latest_per_page
+  type: integer
+  default: 4
+
+all_film:
+  name: count of film first page
+  type: integer
+  default: 4
+
+random_per_page:
+  name: random_per_page
+  type: integer
+  default: 6
+
+comments_per_page:
+  name: comments_per_page
+  type: integer
+  default: 5
+
+info_blog:
+  name: info_blog
+  type: integer
+  default: 3
+
+blog_redy:
+  name: blog_redy
+  type: integer
+  default: 3
+
+
+registration_from:
+  name: email_site
+  type: string
+  default: oleg@example.com 
+
+
+delay_comment_notifications:
+  name: delay_comment_notifications
+  type: integer
+  default: 8 
+
+info_blog_per_page:
+  name: info_blog_per_page
+  type: integer
+  default: 2
+
+copyright:
+  name: copyright
+  type: string
+  default: copyright oleg prin
+
+name_organization: 
+  name: name_organization
+  type: string
+  default: Timeorg
+
+domain_name: 
+  name: domain_name
+  type: string
+  default: http://my.blog
+
+designed_by: 
+  name: designed_by
+  type: string
+  default: designed_by Oleg Starosvitskij
+
+slogan: 
+  name: slogan
+  type: string
+  default: Save money today!
+
+admin_notification_address:
+  name: admin_notification_address
+  type: string
+  default: oleg.example@gmail.com
+
+about_to_company_title:
+  name: about to company name
+  type: text
+  default: about_to_company_title Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum eget bibendum tellus. Nunc vel imperdiet tellus. Mauris ornare aliquam urna, accumsan bibendum eros auctor ac.
+
+
+about_to_company:
+  name: About to company
+  type: text
+  default: about_to_company Curabitur purus mi, pharetra vitae viverra et, mattis sit amet nunc. Quisque enim ipsum, convallis sit amet molestie in, placerat vel urna. Praesent congue auctor elit, nec pretium ipsum volutpat vitae. Vivamus eget ipsum sit amet ipsum tincidunt fermentum. Sed hendrerit neque ac erat condimentum vulputate. Nulla velit massa, dictum etinterdum quis, tempus at velit.
+
+our_mission_title:
+  name: Our mission
+  type: text
+  default: our_mission_title Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum eget bibendum tellus. Nunc vel imperdiet tellus. Mauris ornare aliquam urna, accumsan bibendum eros auctor ac.
+
+our_mission:
+  name: Site Title
+  type: text
+  default: our_mission Maecenas vestibulum fermentum eleifend. Mauris erat sem, suscipit non tincidunt quis, vestibulum eget elit. Duis eget arcu ante. Proin nulla elit, elementum sit amet commodo et, eleifend vitae quam. Nam vel aliquam tortor. Aliquam bibendum erat a urna interdum quis mattis augue interdum. Phasellus fermentum bibendum mauris, ut semper justo pharetra vestibulum. Duis dictum purus sed nibh commodo a congue elit lobortis. Nunc sed feugiat tellus. Mauris aliquet lorem non enim euismod quis fermentum erat porta. Nullam non elit orci. Aliquam blandit mattis feugiat. Cras pulvinar aliquet massa, quis laoreet mi pulvinar ac. Aliquam mi augue, vehicula in consectetur in, porttitor sed tellus. Mauris convallis dapibus auctor. Integer in egestas lorem. In nulla dolor, sollicitudin vitae sollicitudin quis, viverra at lorem. Ut ullamcorper velit et nisi feugiat non sagittis tortor pharetra. Mauris ut urna et magna commodo cursus. Curabitur quis elementum arcu. Maecenas eleifend, urna vitae vehicula bibendum, felis tellus tincidunt lorem, at iaculis neque eros ac dui. Nunc malesuada pulvinar suscipit. Phasellus sed tortor quis ligula facilisis aliquam. Aliquam quis magna eu dolor posuere malesuada. Quisque consequat, metus fermentum convallis imperdiet, ante justo pharetra enim, vel commodo ipsum mauris eget purus. Morbi lacinia nisl urna, scelerisque suscipit lacus. Nulla ac orci ut nunc venenatis gravida.  
+
+services: 
+  name: Services
+  type: text
+  default: services Curabitur sed urna id nunc pulvinar semper. Nunc sit amet tortor sit amet lacus sagittis posuere cursus vitae nunc.Etiam venenatis, turpis at eleifend porta, nisl nulla bibendum justo.
+
+adress:
+  name: Adress
+  type: string
+  default: 1458 Template Access, USA
+
+contact:
+  name: contact
+  type: string
+  default: contact 1458 Template Access, USA
+
+telephone:
+  name: Telephone
+  type: string
+  default: +123-1234-5678
+
+fax:
+  name: fax
+  type: string
+  default: +458-4578
+
+others_telephone:
+  name: others_telephone
+  type: string
+  default: +458-4578
+
+domain:
+  name: Domain
+  type: string
+  default: timeorg.com    
+
+support_one:
+  name: Contact
+  type: text
+  default: Lorem ipsum dolor sit amet, consectetur adipiscing elit. <strong>Suspendisse nulla ligula, blandit ultricies aliquet ac, lobortis in massa. Nunc dolor sem, tincidunt vitae viverra in, egestas sed lacus.</strong> Etiam in ullamcorper felis. Nulla cursus feugiat leo, ut dictum metus semper a. Vivamus euismod, arcu gravida sollicitudin vestibulum, quam sem tempus quam, quis ullamcorper erat nunc in massa. Donec aliquet ante non diam sollicitudin quis auctor velit sodales. Morbi neque est, posuere at fringilla non, mollis nec nibh. Sed commodo tortor nec sem tincidunt mattis. Nam convallis aliquam nibh eu luctus. Nunc vel tincidunt lacus. Suspendisse sit amet pulvinar ante.       
+
+
+support_two:
+  name: Support two
+  type: text
+  default: support_two Phasellus diam justo, laoreet vel vulputate eu, congue vel est. Maecenas eros libero, sollicitudin a vulputate fermentum, ultrices vel lacus. Nam in metus non augue fermentum consequat ultrices ac enim. Integer aliquam urna non diam aliquam eget hendrerit sem molestie.   
+
+
+support_three:
+  name: Support three
+  type: text
+  default: support_three Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum eget bibendum tellus. Nunc vel imperdiet tellus. Mauris ornare aliquam urna, accumsan bibendum eros auctor ac.     # 'name' is the name that appears in the edit form
+# 
+# 'type' can be 'string' for a text field, 'password' for a password field or 'text' for a text area
+#   'type' defaults to 'string'
+# 
+# 'default' is the default value to use if there's no entry in the database. Otherwise, nil will be returned
+# 
+# Some Examples:
+#   
+# site_title:
+#   name: Site Title
+#   default: My Site
+#   type: string
+#   
+# site_description:
+#   name: Description for Google
+#   default: Lots of Awesomeness Here
+#   type: text
+#   
+# secret:
+#   name: Secret Password for Accessing Secret Areas
+#   default: secret
+#   type: password

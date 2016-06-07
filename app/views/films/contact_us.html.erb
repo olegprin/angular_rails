@@ -1,0 +1,147 @@
+
+<%= title "Contact Us" %>
+
+<!DOCTYPE html>
+<!-- saved from url=(0021)https://habrahabr.ru/ -->
+  <html class="fonts-loaded"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    
+    <meta content="width=1024" name="viewport">
+    <title>Интересные публикации / Хабрахабр</title>
+
+
+
+      <meta property="og:image" content="https://habrahabr.ru/i/habralogo.jpg">
+<link rel="image_src" href="https://habrahabr.ru/i/habralogo.jpg">
+
+    <meta name="yandex-verification" content="71593b225aeafc4e">
+    <meta name="referrer" content="unsafe-url">
+    <meta name="pocket-site-verification" content="ed24b2b9721edf0a282c5b4a3232c4">
+
+    <style type="text/css">
+      @font-face{font-family:'Fira Sans';font-style:normal;font-display:swap;font-weight:500;src:url(/fonts/0/FiraSans/FiraSans-Medium.eot);src:local('Fira Sans Medium'),local(FiraSans-Medium),url(/fonts/0/FiraSans/FiraSans-Medium.eot?#iefix) format("embedded-opentype"),url(/fonts/0/FiraSans/FiraSans-Medium.woff2) format("woff2"),url(/fonts/0/FiraSans/FiraSans-Medium.woff) format("woff"),url(/fonts/0/FiraSans/FiraSans-Medium.ttf) format("truetype")}
+    </style>
+  
+
+
+    <meta name="yandex-verification" content="67d46b975fa41645">
+    
+    <meta content="Хабрахабр" name="apple-mobile-web-app-title">
+
+    <%= render "home/adversting"%>
+
+
+</head>
+
+  <body>
+    <div class="layout_inner">
+      <div id="layout">
+        <div id="navbar_overlay" class="hidden"></div>
+        
+        <%=render "home/left_side"%>
+
+        <div class="inner">
+
+          
+            <div class="page-header page-header_inline">
+  <h1 class="page-header__title page-header__title_inline">Публикации</h1>
+    <%= form_tag results_path, method: :get, role: 'search', class: "search-form" do %>
+    <%= text_field_tag :query, params[:query], class: "search-form__field", placeholder: "Поиск" %>
+    <%= submit_tag "Search", name: nil, class: "search-form__button icon_search" %>
+<% end %>
+
+
+</div>
+  <div class="column-wrapper js-sticky-wrapper">
+    <div class="content_left js-content_left">
+      <div class="tabs">
+        <%=render "home/small_navbar"%>
+      </div>
+
+
+
+
+
+
+
+      <div class="posts_list">
+        <div class="posts shortcuts_items">
+          
+
+           <%= bootstrap_form_for @messagestoadministrator, layout: :vertical, label_col: "col-sm-2", control_col: "col-sm-6" do |f| %>
+                  <%if user_signed_in?%>
+             
+                
+                  <%= f.text_field :email, value: "#{current_user.email}", size: "40"%>
+      
+               <%else%>
+         
+                   <%= f.text_field :name, size: "40"%>
+             
+                  <%= f.text_field :telephone, size: "40"%>
+        
+                   <%end%>
+            
+               
+                  <%= f.text_field :name,label: "Title", size: "40"%>
+             
+
+                      <%= f.text_area :message, size: "39x5"%>
+            
+                    <%= f.submit label: "Create message"%>
+          
+          <%end%>
+
+
+        </div>
+      </div>
+    </div>
+
+
+
+        
+    <%=render "home/side_adversting"%>
+    
+  
+
+
+  </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

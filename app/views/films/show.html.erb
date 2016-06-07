@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+
+<html class="fonts-loaded">
+
+  <%=render "home/head"%>
+  <body>
+    <div class="layout_inner">
+      <div id="layout">
+        <div id="navbar_overlay" class="hidden"></div>
+        
+        <%=render "home/left_side"%>
+
+        <div class="inner">
+
+        <%=render "home/search"%>
+  <div class="column-wrapper js-sticky-wrapper">
+    <div class="content_left js-content_left">
+      <div class="tabs">
+        <%=render "home/small_navbar"%>
+      </div>
+      <div class="posts_list">
+        <div class="posts shortcuts_items">
+          <%=render partial: "home/article", locals: {film: @film}%>
+          <%= render partial: "comments/comment_form"%> 
+          <%=render "home/middle_adwersting"%>
+          <%#=render "home/article"%>
+        </div>
+      </div>
+    </div>   
+    <%=render "home/side_adversting"%>
+  </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+

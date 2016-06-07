@@ -1,0 +1,67 @@
+
+        <li><%= link_to t('menu.languages.all_films'), root_path %>
+        </li>
+        <% if user_signed_in? %>
+          <li><%= link_to t('menu.languages.create_film'), new_film_path, 
+          data: { modal: true }
+            %>
+          </li>
+        <% else %>
+          <li><%= link_to t('menu.languages.create_film'), new_user_registration_path
+            %> 
+          </li>
+        <% end %>
+        <li>
+          <%= link_to t('menu.languages.advanced_search'), new_search_path, 
+          data: { modal: true }  %>
+        </li>
+        <div class="navbar-form navbar-left" role="search">
+          <%= form_tag(search_films_path, method: :get) do %>
+            <div class="form-group">
+              <%= text_field_tag :search, params[:short_search], :placeholder => t('menu.languages.search') %>
+              <%= submit_tag t('menu.languages.search')%>
+            </div>
+          <% end %>
+        </div>
+        <div class="navbar-form navbar-left" role="search">
+          <%= link_to(image_tag('flag_sha.jpg', style: "height: 25px"), change_locale_path(:en)) %>
+        </div>
+     
+        <div class="navbar-form navbar-left" role="search">
+          <%= link_to(image_tag('Russia256.png', style: "height: 25px"), change_locale_path(:ru)) %>
+        </div>
+      </ul>
+      <ul class="nav navbar-nav navbar-right">
+        <% if user_signed_in? %> 
+          <li class="dropdown">
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><%=t(:dropdown)%> 
+              <span class="caret">
+              </span>
+            </a>
+            <ul class="dropdown-menu">
+              <div class="list-group-item">
+            
+                  <li>
+
+                    <%= ui_button 'info',  t(:my_info), user_show_navbar_path(current_user.id)%>
+                     <%= ui_button 'edit',  t(:edit_info), edit_info_path(current_info.id)%>
+
+                  </li>
+                <li> 
+                   <%= ui_button 'destroy',  t('menu.languages.sign_out'),   destroy_user_session_path, :method => :delete  %>
+                </li>
+              </div> 
+            </ul>
+          </li> 
+        <% else %>
+          <ul class="nav navbar-nav navbar-right">
+            <%= link_to image_tag("/assets/google.png", width: '132', height: '42', alt: 'Site Logo', class: "logo"), user_omniauth_authorize_path(:google_oauth2) %>
+            <%= render "devise/sessions/new"%>
+            <%= render "devise/registrations/new"%>    
+          </ul>  
+        <% end %>
+  
+
+
+   
+     

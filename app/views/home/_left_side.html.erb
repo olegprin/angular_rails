@@ -1,0 +1,10 @@
+<div id="navbar" style="bottom: 0px;" class="fixed">
+  <div class="nav_panel">
+    <a><%=link_to "", root_path, class: "logo"%></a>
+    <%if user_signed_in?%>
+      <a><%=link_to "Выйти", destroy_user_session_path, :method => :delete, class: "tab tab_login", id: "login"%><span class="g-icon g-icon-lock"></span></a> 
+          <%else%>
+      <a><%=link_to "Войти", new_user_session_path, class: "tab tab_login", id: "login"%><span class="g-icon g-icon-lock"></span></a> 
+    <%end%> 
+  </div>
+</div>

@@ -1,0 +1,754 @@
+/* line 3, /home/vagrant/blog_deploy/app/assets/stylesheets/home.scss */
+body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  color: #7e7c7c;
+  font: normal 12px/1.5em "Liberation sans", Arial, Helvetica, sans-serif;
+}
+
+/* line 11, /home/vagrant/blog_deploy/app/assets/stylesheets/home.scss */
+html, .main {
+  padding: 0;
+  margin: 0;
+}
+
+/* line 15, /home/vagrant/blog_deploy/app/assets/stylesheets/home.scss */
+.main {
+  background: no-repeat center top;
+}
+
+/* line 18, /home/vagrant/blog_deploy/app/assets/stylesheets/home.scss */
+.clr {
+  clear: both;
+  padding: 0;
+  margin: 0;
+  width: 100%;
+  font-size: 0;
+  line-height: 0;
+}
+
+/* line 26, /home/vagrant/blog_deploy/app/assets/stylesheets/home.scss */
+h2 {
+  margin: 8px 0;
+  padding: 8px 0;
+  font-size: 26px;
+  font-weight: normal;
+  line-height: 1.2em;
+  color: #fff;
+  text-transform: none;
+}
+
+/* line 35, /home/vagrant/blog_deploy/app/assets/stylesheets/home.scss */
+p {
+  margin: 8px 0;
+  padding: 0 0 8px 0;
+}
+
+/* line 39, /home/vagrant/blog_deploy/app/assets/stylesheets/home.scss */
+a {
+  color: black;
+  text-decoration: underline;
+}
+
+/* line 43, /home/vagrant/blog_deploy/app/assets/stylesheets/home.scss */
+.header, .content, .menu_nav, .fbg, .footer, form, ol, ol li, ul, .content .mainbar, .content .sidebar {
+  margin: 0;
+  padding: 0;
+}
+
+/* line 49, /home/vagrant/blog_deploy/app/assets/stylesheets/home.scss */
+.header_resize {
+  margin: 0 auto;
+  padding: 0 0 24px;
+  width: 962px;
+}
+
+/* line 62, /home/vagrant/blog_deploy/app/assets/stylesheets/home.scss */
+.logo {
+  padding-right: 5px;
+  padding: 0;
+  float: none;
+  float: left;
+  width: auto;
+  height: 90px;
+}
+
+/* line 70, /home/vagrant/blog_deploy/app/assets/stylesheets/home.scss */
+h1 {
+  margin: 4;
+  padding: 18px 4 4;
+  font-size: 32px;
+  font-weight: bold;
+  line-height: 1.2em;
+  text-transform: none;
+  letter-spacing: 2px;
+}
+
+/* line 79, /home/vagrant/blog_deploy/app/assets/stylesheets/home.scss */
+h1 a, h1 a:hover {
+  color: black;
+  text-decoration: none;
+}
+
+/* line 85, /home/vagrant/blog_deploy/app/assets/stylesheets/home.scss */
+h1 small {
+  display: block;
+  margin: 0;
+  font-size: 12px;
+  line-height: 1.2em;
+  letter-spacing: normal;
+  text-transform: none;
+  color: black;
+}
+
+/* line 94, /home/vagrant/blog_deploy/app/assets/stylesheets/home.scss */
+.slider {
+  margin: 0 -270px;
+  padding: 0;
+}
+
+/* line 98, /home/vagrant/blog_deploy/app/assets/stylesheets/home.scss */
+.rss {
+  padding: 18px 20px 0 0;
+  float: right;
+  width: auto;
+}
+
+/* line 103, /home/vagrant/blog_deploy/app/assets/stylesheets/home.scss */
+.rss p {
+  margin: 0;
+  padding: 0;
+  float: right;
+  width: auto;
+  color: #fff;
+  font-size: 13px;
+  line-height: 1.5em;
+  font-weight: bold;
+}
+
+/* line 113, /home/vagrant/blog_deploy/app/assets/stylesheets/home.scss */
+.rss a {
+  color: #fff;
+  text-decoration: none;
+}
+
+/* line 117, /home/vagrant/blog_deploy/app/assets/stylesheets/home.scss */
+.rss a:hover {
+  text-decoration: underline;
+}
+
+/* line 120, /home/vagrant/blog_deploy/app/assets/stylesheets/home.scss */
+.rss img {
+  margin: -3px 0 -3px 6px;
+  border: none;
+}
+
+/* line 124, /home/vagrant/blog_deploy/app/assets/stylesheets/home.scss */
+.menu_nav {
+  margin: 0;
+  padding: 18px 0 0;
+  height: 50px;
+  float: right;
+}
+
+/* line 137, /home/vagrant/blog_deploy/app/assets/stylesheets/home.scss */
+.menu_nav ul {
+  list-style: none;
+  padding: 0 12px;
+  height: 50px;
+  float: left;
+  background: url(/assets/menu.gif) repeat-x left top;
+}
+
+/* line 144, /home/vagrant/blog_deploy/app/assets/stylesheets/home.scss */
+.menu_nav ul li {
+  margin: 0;
+  padding: 0 2px 0 0;
+  float: left;
+  background: url(/assets/menu_split.gif) no-repeat right center;
+}
+
+/* line 150, /home/vagrant/blog_deploy/app/assets/stylesheets/home.scss */
+.menu_nav ul li {
+  display: block;
+  margin: 0;
+  padding: 17px 24px 0;
+  height: 33px;
+  font-size: 15px;
+  line-height: 18px;
+  font-weight: normal;
+  color: #b6b7b7;
+  text-decoration: none;
+  text-transform: none;
+  padding-down: 10px;
+  text-align: center;
+}
+
+/* line 169, /home/vagrant/blog_deploy/app/assets/stylesheets/home.scss */
+.menu_nav ul li.active, .menu_nav ul li:hover {
+  text-decoration: none;
+  height: 60px;
+  color: black;
+  background: url(/assets/menu_a.gif) repeat-x left top;
+}
+
+/* line 175, /home/vagrant/blog_deploy/app/assets/stylesheets/home.scss */
+.content {
+  color: black;
+}
+
+/* line 179, /home/vagrant/blog_deploy/app/assets/stylesheets/home.scss */
+.content_resize {
+  margin: 0 auto;
+  padding: 24px 0 40px;
+  width: 960px;
+}
+
+/* line 184, /home/vagrant/blog_deploy/app/assets/stylesheets/home.scss */
+.content .mainbar {
+  margin: 0;
+  padding: 0;
+  float: right;
+  width: 660px;
+}
+
+/* line 190, /home/vagrant/blog_deploy/app/assets/stylesheets/home.scss */
+.content .mainbar h2 {
+  margin-bottom: 0;
+  padding: 6px 12px;
+  padding-top: 0px;
+  background: url(/assets//h2.gif) repeat-x left top;
+}
+
+/* line 196, /home/vagrant/blog_deploy/app/assets/stylesheets/home.scss */
+.content .mainbar div.img {
+  padding: 12px 0;
+  float: left;
+}
+
+/* line 202, /home/vagrant/blog_deploy/app/assets/stylesheets/home.scss */
+.content .mainbar img.fl {
+  margin: 0;
+  border: none;
+}
+
+/* line 206, /home/vagrant/blog_deploy/app/assets/stylesheets/home.scss */
+.content .mainbar .article {
+  margin: 0 0 8px;
+  padding-top: 0px;
+  padding-left: 20px;
+}
+
+/* line 211, /home/vagrant/blog_deploy/app/assets/stylesheets/home.scss */
+.content .mainbar .post_content {
+  float: right;
+  width: 420px;
+}
+
+/* line 215, /home/vagrant/blog_deploy/app/assets/stylesheets/home.scss */
+.content .mainbar .post_content strong {
+  color: #7e7c7c;
+}
+
+/* line 218, /home/vagrant/blog_deploy/app/assets/stylesheets/home.scss */
+.content .sidebar {
+  padding: 0;
+  float: left;
+  width: 280px;
+}
+
+/* line 223, /home/vagrant/blog_deploy/app/assets/stylesheets/home.scss */
+.content .sidebar .gadget {
+  margin: 0 0 12px 20px;
+  padding: 6px 0 24px;
+}
+
+/* line 227, /home/vagrant/blog_deploy/app/assets/stylesheets/home.scss */
+.content .sidebar h2 {
+  padding: 6px 12px;
+  background: url(/assets/h2.gif) repeat-x left top;
+}
+
+/* line 231, /home/vagrant/blog_deploy/app/assets/stylesheets/home.scss */
+ul.sb_menu, ul.ex_menu {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  color: #7e7e7e;
+}
+
+/* line 237, /home/vagrant/blog_deploy/app/assets/stylesheets/home.scss */
+ul.sb_menu li, ul.ex_menu li {
+  margin: 0;
+}
+
+/* line 240, /home/vagrant/blog_deploy/app/assets/stylesheets/home.scss */
+ul.sb_menu li, ul.ex_menu li {
+  padding: 8px 0;
+  width: 220px;
+  background: repeat-x left bottom;
+}
+
+/* line 245, /home/vagrant/blog_deploy/app/assets/stylesheets/home.scss */
+ul.sb_menu li a {
+  color: #7e7e7e;
+  text-decoration: none;
+  margin-left: 0;
+  padding: 4px 8px 4px 0;
+  background: no-repeat left center;
+}
+
+/* line 252, /home/vagrant/blog_deploy/app/assets/stylesheets/home.scss */
+ul.ex_menu li a {
+  font-weight: bold;
+  color: #7e7e7e;
+  text-decoration: none;
+  background: no-repeat left center;
+}
+
+/* line 258, /home/vagrant/blog_deploy/app/assets/stylesheets/home.scss */
+ul.sb_menu li a:hover, ul.ex_menu li a:hover {
+  color: yellow;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+/* line 266, /home/vagrant/blog_deploy/app/assets/stylesheets/home.scss */
+.article h2 span {
+  color: black;
+}
+
+/* line 271, /home/vagrant/blog_deploy/app/assets/stylesheets/home.scss */
+p.spec {
+  padding-bottom: 0px;
+}
+
+/* line 274, /home/vagrant/blog_deploy/app/assets/stylesheets/home.scss */
+p.infopost {
+  margin: 0;
+  padding: 6px 0;
+  text-transform: none;
+  color: black;
+}
+
+/* line 280, /home/vagrant/blog_deploy/app/assets/stylesheets/home.scss */
+p.infopost a {
+  padding: 0 2px;
+  text-decoration: none;
+  font-weight: normal;
+  color: black;
+  font-weight: bold;
+}
+
+/* line 287, /home/vagrant/blog_deploy/app/assets/stylesheets/home.scss */
+p.infopost a:hover {
+  text-decoration: underline;
+  color: black;
+}
+
+/* line 295, /home/vagrant/blog_deploy/app/assets/stylesheets/home.scss */
+p.infopost span.date {
+  color: black;
+}
+
+/* line 298, /home/vagrant/blog_deploy/app/assets/stylesheets/home.scss */
+.article a.com {
+  margin: 0;
+  padding: 0;
+  font-weight: normal;
+  text-decoration: none;
+  text-align: center;
+}
+
+/* line 306, /home/vagrant/blog_deploy/app/assets/stylesheets/home.scss */
+.article a.com:hover {
+  text-decoration: none;
+}
+
+/* line 309, /home/vagrant/blog_deploy/app/assets/stylesheets/home.scss */
+.article a.com span {
+  font-weight: bold;
+  color: black;
+}
+
+/* line 313, /home/vagrant/blog_deploy/app/assets/stylesheets/home.scss */
+.post_content a {
+  display: block;
+  float: left;
+  margin: 0 0 12px;
+  padding: 9px 12px;
+  font-size: 16px;
+  line-height: 20px;
+  font-weight: normal;
+  text-transform: none;
+  color: #d9d9dc;
+  text-decoration: none;
+  text-align: center;
+  background: url(/assets/readmore.jpg) repeat-x left top;
+}
+
+/* line 327, /home/vagrant/blog_deploy/app/assets/stylesheets/home.scss */
+.content p.pages {
+  margin: 0;
+  padding: 24px 20px;
+  font-size: 11px;
+  line-height: 16px;
+  color: #fff;
+  text-align: left;
+}
+
+/* line 335, /home/vagrant/blog_deploy/app/assets/stylesheets/home.scss */
+.content p.pages span, .content p.pages a {
+  display: block;
+  float: left;
+  margin: 0 2px 0 0;
+  padding: 7px 0;
+  width: 30px;
+  text-decoration: none;
+  text-align: center;
+  background: no-repeat center center;
+}
+
+/* line 345, /home/vagrant/blog_deploy/app/assets/stylesheets/home.scss */
+.content p.pages span, .content p.pages a:hover {
+  color: #fff;
+  background: #235288;
+}
+
+/* line 349, /home/vagrant/blog_deploy/app/assets/stylesheets/home.scss */
+.content p.pages a {
+  color: #fff;
+  border: none;
+}
+
+/* line 353, /home/vagrant/blog_deploy/app/assets/stylesheets/home.scss */
+.content p.pages small {
+  font-size: 12px;
+  float: right;
+}
+
+/* line 357, /home/vagrant/blog_deploy/app/assets/stylesheets/home.scss */
+.content .mainbar .comment {
+  margin: 0;
+  padding: 16px 0 0 0;
+}
+
+/* line 361, /home/vagrant/blog_deploy/app/assets/stylesheets/home.scss */
+.content .mainbar .comment img.userpic {
+  border: 1px solid #dedede;
+  margin: 10px 16px 0 0;
+  padding: 0;
+  float: left;
+}
+
+/* line 367, /home/vagrant/blog_deploy/app/assets/stylesheets/home.scss */
+.fbg {
+  border-bottom: 1px solid #000;
+}
+
+/* line 370, /home/vagrant/blog_deploy/app/assets/stylesheets/home.scss */
+.fbg_resize {
+  margin: 0 auto;
+  width: 920px;
+  padding: 16px 20px;
+}
+
+/* line 375, /home/vagrant/blog_deploy/app/assets/stylesheets/home.scss */
+.fbg h2 {
+  margin-bottom: 24px;
+  padding-bottom: 8px;
+  color: black;
+}
+
+/* line 380, /home/vagrant/blog_deploy/app/assets/stylesheets/home.scss */
+.fbg img.gal {
+  margin: 0 8px 8px 0;
+  padding: 0;
+  border: 4px solid #1d1d1e;
+}
+
+/* line 385, /home/vagrant/blog_deploy/app/assets/stylesheets/home.scss */
+.fbg .col {
+  margin: 0;
+  float: left;
+}
+
+/* line 389, /home/vagrant/blog_deploy/app/assets/stylesheets/home.scss */
+.fbg .c1 {
+  padding: 0 16px 0 0;
+  width: 280px;
+}
+
+/* line 393, /home/vagrant/blog_deploy/app/assets/stylesheets/home.scss */
+.fbg .c2 {
+  padding: 0 36px 0 16px;
+  width: 280px;
+}
+
+/* line 397, /home/vagrant/blog_deploy/app/assets/stylesheets/home.scss */
+.fbg .c3 {
+  padding: 0 0 0 16px;
+  width: 274px;
+}
+
+/* line 401, /home/vagrant/blog_deploy/app/assets/stylesheets/home.scss */
+.fbg .fbg_ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+/* line 406, /home/vagrant/blog_deploy/app/assets/stylesheets/home.scss */
+.fbg .fbg_ul li {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+/* line 411, /home/vagrant/blog_deploy/app/assets/stylesheets/home.scss */
+.fbg .fbg_ul li a {
+  display: block;
+  margin: 0;
+  padding: 2px 0 2px 12px;
+  color: #fff;
+  text-decoration: none;
+  background: url(/assets/li.gif) no-repeat left center;
+}
+
+/* line 419, /home/vagrant/blog_deploy/app/assets/stylesheets/home.scss */
+.fbg .fbg_ul li a:hover {
+  color: #fff;
+  text-decoration: underline;
+}
+
+/* line 423, /home/vagrant/blog_deploy/app/assets/stylesheets/home.scss */
+.fbg p.contact_info {
+  line-height: 1.8em;
+}
+
+/* line 426, /home/vagrant/blog_deploy/app/assets/stylesheets/home.scss */
+.fbg p.contact_info a {
+  color: #fff;
+  text-decoration: underline;
+  font-weight: normal;
+}
+
+/* line 431, /home/vagrant/blog_deploy/app/assets/stylesheets/home.scss */
+.fbg p.contact_info span {
+  display: block;
+  float: left;
+  width: 74px;
+  font-weight: bold;
+}
+
+/* line 437, /home/vagrant/blog_deploy/app/assets/stylesheets/home.scss */
+ol {
+  list-style: none;
+}
+
+/* line 440, /home/vagrant/blog_deploy/app/assets/stylesheets/home.scss */
+ol li {
+  display: block;
+  clear: both;
+}
+
+/* line 444, /home/vagrant/blog_deploy/app/assets/stylesheets/home.scss */
+ol li label {
+  display: block;
+  margin: 0;
+  padding: 16px 0 0 0;
+}
+
+/* line 449, /home/vagrant/blog_deploy/app/assets/stylesheets/home.scss */
+ol li input.text {
+  width: 480px;
+  border: 1px solid #c0c0c0;
+  margin: 0;
+  padding: 5px 2px;
+  height: 16px;
+  background-color: #fff;
+}
+
+/* line 457, /home/vagrant/blog_deploy/app/assets/stylesheets/home.scss */
+ol li textarea {
+  width: 480px;
+  border: 1px solid #c0c0c0;
+  margin: 0;
+  padding: 2px;
+  background-color: #fff;
+}
+
+/* line 464, /home/vagrant/blog_deploy/app/assets/stylesheets/home.scss */
+ol li .send {
+  margin: 16px 0 0 0;
+}
+
+/* line 475, /home/vagrant/blog_deploy/app/assets/stylesheets/home.scss */
+#formsearch {
+  margin: 0;
+  padding: 0;
+  border-style: groove;
+  width: auto;
+  height: 40px;
+}
+
+/* line 483, /home/vagrant/blog_deploy/app/assets/stylesheets/home.scss */
+#formsearch span {
+  display: block;
+  margin: 0;
+  padding: 0;
+  float: left;
+  background: url(/assets/search_bg.gif) no-repeat left top;
+}
+
+/* line 491, /home/vagrant/blog_deploy/app/assets/stylesheets/home.scss */
+.editbox_search {
+  margin: 0;
+  padding: 8px 10px;
+  float: left;
+  width: 244px;
+  font-size: 12px;
+  line-height: 16px;
+  background: none;
+  outline: none;
+  border: none;
+}
+
+/* line 503, /home/vagrant/blog_deploy/app/assets/stylesheets/home.scss */
+#formsearch input.button_search {
+  margin: 0;
+  padding: 0;
+  border: none;
+  float: left;
+}
+
+/* line 509, /home/vagrant/blog_deploy/app/assets/stylesheets/home.scss */
+.image_tag_search {
+  height: 32px;
+}
+
+/* line 518, /home/vagrant/blog_deploy/app/assets/stylesheets/home.scss */
+.footer {
+  border-top: 1px solid #151515;
+}
+
+/* line 521, /home/vagrant/blog_deploy/app/assets/stylesheets/home.scss */
+.footer_resize {
+  margin: 0 auto;
+  padding: 0;
+  width: 920px;
+  line-height: 1.5em;
+  color: black;
+}
+
+/* line 528, /home/vagrant/blog_deploy/app/assets/stylesheets/home.scss */
+.footer_resize p {
+  margin: 32px 0;
+  padding: 0;
+  line-height: normal;
+  white-space: nowrap;
+  text-indent: inherit;
+}
+
+/* line 535, /home/vagrant/blog_deploy/app/assets/stylesheets/home.scss */
+.footer_resize a {
+  color: #fff;
+  font-weight: normal;
+  margin: 0;
+  padding: 0;
+  border: none;
+  text-decoration: underline;
+  color: black;
+}
+
+/* line 544, /home/vagrant/blog_deploy/app/assets/stylesheets/home.scss */
+.footer_resize a:hover {
+  color: green;
+  text-decoration: none;
+}
+
+/* line 548, /home/vagrant/blog_deploy/app/assets/stylesheets/home.scss */
+.footer_resize .lf {
+  float: left;
+}
+
+/* line 551, /home/vagrant/blog_deploy/app/assets/stylesheets/home.scss */
+.footer_resize .rf {
+  float: right;
+}
+
+/* line 554, /home/vagrant/blog_deploy/app/assets/stylesheets/home.scss */
+a {
+  outline: none;
+}
+
+/*
+  Coin Slider jQuery plugin CSS styles
+*/
+/* line 562, /home/vagrant/blog_deploy/app/assets/stylesheets/home.scss */
+.coin-slider {
+  padding: 0;
+  overflow: hidden;
+  zoom: 1;
+  position: relative;
+  float: right;
+}
+
+/* line 569, /home/vagrant/blog_deploy/app/assets/stylesheets/home.scss */
+.coin-slider a {
+  text-decoration: none;
+  outline: none;
+  border: none;
+}
+
+/* buttons for switching */
+/* line 575, /home/vagrant/blog_deploy/app/assets/stylesheets/home.scss */
+.cs-buttons {
+  display: none;
+  margin: 8px 0 0;
+  padding: 0;
+  font-size: 0;
+  float: left;
+}
+
+/* line 582, /home/vagrant/blog_deploy/app/assets/stylesheets/home.scss */
+.cs-buttons a {
+  margin: 0 2px;
+  width: 20px;
+  height: 20px;
+  float: left;
+  color: #fff;
+  text-indent: -10000px;
+  background: no-repeat center center;
+}
+
+/* line 591, /home/vagrant/blog_deploy/app/assets/stylesheets/home.scss */
+.cs-buttons a.cs-active {
+  color: #fff;
+}
+
+/* text in slider */
+/* line 595, /home/vagrant/blog_deploy/app/assets/stylesheets/home.scss */
+.cs-title {
+  display: none;
+  padding: 16px 60px 16px 24px;
+  width: 876px;
+  color: #fff;
+  font-size: 15px;
+  line-height: 1.5em;
+  background: url(/assets/overlay.png) repeat left top;
+}
+
+/* line 604, /home/vagrant/blog_deploy/app/assets/stylesheets/home.scss */
+.cs-title big {
+  font-size: 20px;
+}
+
+/* buttons Next and Prew */
+/* line 608, /home/vagrant/blog_deploy/app/assets/stylesheets/home.scss */
+.cs-prev, .cs-next {
+  background: url(/assets/overlay.png) repeat left top;
+  color: #fff;
+  padding: 0 10px;
+}
