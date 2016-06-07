@@ -1,32 +1,7 @@
 <!DOCTYPE html>
 <!-- saved from url=(0021)https://habrahabr.ru/ -->
-  <html class="fonts-loaded"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-    
-    <meta content="width=1024" name="viewport">
-    <title>Интересные публикации / Хабрахабр</title>
-
-
-
-      <meta property="og:image" content="https://habrahabr.ru/i/habralogo.jpg">
-<link rel="image_src" href="https://habrahabr.ru/i/habralogo.jpg">
-
-    <meta name="yandex-verification" content="71593b225aeafc4e">
-    <meta name="referrer" content="unsafe-url">
-    <meta name="pocket-site-verification" content="ed24b2b9721edf0a282c5b4a3232c4">
-
-    <style type="text/css">
-      @font-face{font-family:'Fira Sans';font-style:normal;font-display:swap;font-weight:500;src:url(/fonts/0/FiraSans/FiraSans-Medium.eot);src:local('Fira Sans Medium'),local(FiraSans-Medium),url(/fonts/0/FiraSans/FiraSans-Medium.eot?#iefix) format("embedded-opentype"),url(/fonts/0/FiraSans/FiraSans-Medium.woff2) format("woff2"),url(/fonts/0/FiraSans/FiraSans-Medium.woff) format("woff"),url(/fonts/0/FiraSans/FiraSans-Medium.ttf) format("truetype")}
-    </style>
-  
-
-
-    <meta name="yandex-verification" content="67d46b975fa41645">
-    
-    <meta content="Хабрахабр" name="apple-mobile-web-app-title">
-
-    <%= render "home/adversting"%>
-
-
+<html class="fonts-loaded"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <%=render "home/head"%>
 </head>
 
   <body>
@@ -36,326 +11,32 @@
         
         <%=render "home/left_side"%>
 
-        <div class="inner">
-
-          
-            <div class="page-header page-header_inline">
-  <h1 class="page-header__title page-header__title_inline">Публикации</h1>
-    <%= form_tag results_path, method: :get, role: 'search', class: "search-form" do %>
-    <%= text_field_tag :query, params[:query], class: "search-form__field", placeholder: "Поиск" %>
-    <%= submit_tag "Search", name: nil, class: "search-form__button icon_search" %>
-<% end %>
-
-
-</div>
+        <div class="inner">  
+        <%=render "home/search"%>
   <div class="column-wrapper js-sticky-wrapper">
     <div class="content_left js-content_left">
-        <div class="tabs">
-    <ul class="tabs-menu tabs-menu_habrahabr">
-        <li class="tabs-menu__item tabs-menu__item_inline">
-          <a href="https://habrahabr.ru/all/" class="tab-item ">
-            <span class="tab-item__value">
-              Все подряд&nbsp;
-              <strong class="counter"></strong>
-              <strong class="counter_new">+40</strong>
-            </span>
-          </a>
-        </li>
-        <li class="tabs-menu__item tabs-menu__item_inline">
-          <a href="https://habrahabr.ru/top/" class="tab-item ">
-            <span class="tab-item__value">
-              Лучшие&nbsp;
-              <strong class="counter"></strong>
-              
-            </span>
-          </a>
-        </li>
-        <li class="tabs-menu__item tabs-menu__item_inline">
-          <a href="https://habrahabr.ru/interesting/" class="tab-item tab-item_current">
-            <span class="tab-item__value">
-              Интересные&nbsp;
-              <strong class="counter"></strong>
-              
-            </span>
-          </a>
-        </li>
-    </ul>
-
-  </div>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+      <div class="tabs">
+        <%=render "home/small_navbar"%>
+      </div>
       <div class="posts_list">
         <div class="posts shortcuts_items">
-        
-
-
-
-          <% @films.each do |film| %>
-      <div class="post post_teaser shortcuts_item" id="post_302506">
-        <div class="post__header">
-          <span class="post__time_published">сегодня в 00:46</span>
-            <h2 class="post__title">
-              <a href="https://habrahabr.ru/flows/develop/" class="post__flow" onclick="if (typeof ga === &#39;function&#39;) { ga(&#39;send&#39;, &#39;event&#39;, &#39;flow&#39;, &#39;feed page&#39;, &#39;Разработка&#39;); }">Разработка</a><span class="post__title-arrow">&nbsp;→</span>
-              <a href="https://habrahabr.ru/post/302506/" class="post__title_link">Шестое чувство Facebook</a>
-         </h2>
-          <div class="hubs">
-            <a href="https://habrahabr.ru/hub/reverse-engineering/" class="hub " title="Вы не подписаны на этот хаб" onclick="if (typeof ga === &#39;function&#39;) { ga(&#39;send&#39;, &#39;event&#39;, &#39;hub&#39;, &#39;feed page&#39;, &#39;Реверс-инжиниринг&#39;); }">Реверс-инжиниринг</a><span class="profiled_hub" title="Профильный хаб">*</span>, 
-            <a href="https://habrahabr.ru/hub/ReactJS/" class="hub " title="Вы не подписаны на этот хаб" onclick="if (typeof ga === &#39;function&#39;) { ga(&#39;send&#39;, &#39;event&#39;, &#39;hub&#39;, &#39;feed page&#39;, &#39;ReactJS&#39;); }">ReactJS</a><span class="profiled_hub" title="Профильный хаб">*</span>, 
-            <a href="https://habrahabr.ru/hub/javascript/" class="hub " title="Вы не подписаны на этот хаб" onclick="if (typeof ga === &#39;function&#39;) { ga(&#39;send&#39;, &#39;event&#39;, &#39;hub&#39;, &#39;feed page&#39;, &#39;JavaScript&#39;); }">JavaScript</a><span class="profiled_hub" title="Профильный хаб">*</span>, 
-            <a href="https://habrahabr.ru/hub/facebook_api/" class="hub " title="Вы не подписаны на этот хаб" onclick="if (typeof ga === &#39;function&#39;) { ga(&#39;send&#39;, &#39;event&#39;, &#39;hub&#39;, &#39;feed page&#39;, &#39;Facebook API&#39;); }">Facebook API</a><span class="profiled_hub" title="Профильный хаб">*</span>
-          </div>
+          <%=render partial: "home/articles", locals: {films: @films}%>
+          <%=render "home/middle_adwersting"%>
+          <%#=render "home/article"%>
         </div>
-        <div class="post__body post__body_crop ">
-          <div class="content html_format"><h3>Расширение для Chrome показывает, когда кто-то набирает текст</h3><br>
-            <%= link_to image_tag(film.uploaded_file.url, width: 500, height: 289), film_path(film)%><br>
-            <br>
-            Некоторые люди слишком много времени проводят в социальных сетях. Настолько много, что у них уже возникает зависимость. Один из таких — программист Александр Кирзенберг (Alexandre Kirszenberg), который к тому же любит копаться во внутренностях Facebook — в коде JavaScript, отвечающем за пользовательский интерфейс и коммуникации.<br>
-            <br>
-            «Пару месяцев назад я задумался о маленьком статусном индикаторе, который показывает, когда один из ваших друзей набирает вам текст, — <a href="http://kirszenberg.com/facebook-sixth-sense">пишет</a> Александр. — Такое маленькое расширение UI выдаёт много информации о собеседнике. Если индикатор несколько раз загорается и тухнет, это говорит о нерешительности. Если он загорелся надолго, кто-то пишет вам большое эссе. И нет ничего хуже того мучительного чувства, когда индикатор тухнет и больше не загорается».<br>
-          </div>
-          <div class="buttons" style="padding: 20px 0 0;">
-            <a class="button" href="https://habrahabr.ru/post/302506/#habracut">Читать дальше →</a>
-          </div>
-        </div>
-    <div class="post__footer">
-        <div class="infopanel_wrapper js-user_">
-      <ul class="postinfo-panel " id="infopanel_post_302506">
-            <li class="postinfo-panel__item">
-              <div class="voting-wjt voting-wjt_infopanel js-voting  ">
-                  <button type="button" disabled="" class="voting-wjt__button voting-wjt__button_plus js-plus" title="Голосовать могут только зарегистрированные пользователи.">
-                    <span>↑</span>
-                  </button>
-                <div class="voting-wjt__counter js-mark">
-                      <span class="voting-wjt__result-score js-score" title="Результат голосования виден только авторизованным пользователям">—</span>
-                </div>
-                  <button type="button" disabled="" class="voting-wjt__button voting-wjt__button_minus js-minus" title="Голосовать могут только зарегистрированные пользователи.">
-                    <span>↓</span>
-                  </button>
-              </div>
-            </li>
-        <li class="postinfo-panel__item">
-          <div class="views-count_post" title="Просмотры публикации">4,8k</div>
-        </li>
-        <li class="postinfo-panel__item">
-          <div class="favorite-wjt favorite">
-              <button type="button" disabled="" class="favorite-wjt__button favorite-wjt__button_disabled" onclick="return false;" title="Только зарегистрированные пользователи могут добавлять публикации в избранное">
-                <span>Добавить в избранное</span>
-              </button>
-            <span class="favorite-wjt__counter js-favs_count" title="Количество пользователей, добавивших публикацию в избранное">21</span>
-          </div>
-        </li>
-                <li class="postinfo-panel__item post-author">
-                  <a title="Автор публикации" class="post-author__link" href="https://habrahabr.ru/users/alizar/">
-                      <img src="./Интересные публикации _ Хабрахабр_files/b2382ccaa0679cd72813ba9f6a207133.jpg" class="post-author__pic">@alizar
-                  </a>
-                </li>
-              <li class="postinfo-panel__item postinfo-panel__item_comments">
-                <div class="post-comments">
-                    <a href="https://habrahabr.ru/post/302506/#comments" class="post-comments__link post-comments__link_all" title="Читать комментарии">1</a>
-                </div>
-              </li>
-      </ul>
-    </div>
-    </div>
-  </div>
-    <%end%>
-
-
-
-
-
-
-                <div style="margin-bottom: 40px;" class="shortcuts_item">
-                    <div class="html_banner_wrap">
-      <!--  AdRiver code START. Type:AjaxJS Site: habrahabr PZ: 0 BN: 13 -->
-      <div class="html_banner" id="adriver_banner_1109509440">
-        <span class="html_banner_text">Реклама помогает поддерживать и&nbsp;развивать наши сервисы<br><br><a href="https://habrahabr.ru/adblock/" target="_blank">[подробнее]</a></span>
-        <img src="./Интересные публикации _ Хабрахабр_files/spacer.png" class="html_banner_spacer">
-      </div>
-      <a href="https://special.habrahabr.ru/advertising/" class="firskill__label">Реклама</a>
-      <script type="text/javascript">
-        function show_inner_banner_block300(name, url){
-          if( typeof(name) !== 'undefined'){
-            if ($('.tabs').length && $('.tabs').width() >= 620) { // блок расчитан на >= 620 пикселей
-              $('#adriver_banner_1109509440').html('<iframe src="https://special.habrahabr.ru/api/htmlblock/'+name+'/?iframe&url='+encodeURIComponent(url)+'" width="100%" height="250"></iframe>')
-            }
-          }
-        }
-        var loadAdriverBanner = function(){
-          var keyword = '';
-          var custom = { 4: ar_duo1 };
-          if (typeof crtg_content !== 'undefined' && crtg_content) { keyword = crtg_content; }
-          
-          return new adriver("adriver_banner_1109509440", {sid:176776, bt:52, bn:13, custom: custom, keyword: keyword})
-        }
-        var checkScrollPosition = function(){
-          var htmlBlock = $('#adriver_banner_1109509440');
-              scrollTop = $(window).scrollTop(),
-              scrollBottom = $(window).scrollTop() + $(window).height(),
-              blockTopPosition = htmlBlock.parent().offset().top,
-              adBannerHeight = htmlBlock.height();
-          if (scrollBottom > blockTopPosition){
-            loadAdriverBanner()
-            $(window).off('scroll', checkScrollPosition);
-          }
-        };
-        $(function(){
-          $(window).on('scroll', checkScrollPosition);
-          $(window).on('ready', checkScrollPosition);
-        });
-      </script>
-    </div>
-  </div>
-
-
-
-
-
-
-    <% @films.each do |film| %>         
-    <div class="post post_teaser shortcuts_item" id="post_302222">
-      <div class="post__header">
-        <span class="post__time_published">30 мая в 22:27</span>
-        <h2 class="post__title">
-          <a href="https://habrahabr.ru/flows/misc/" class="post__flow" onclick="if (typeof ga === &#39;function&#39;) { ga(&#39;send&#39;, &#39;event&#39;, &#39;flow&#39;, &#39;feed page&#39;, &#39;Разное&#39;); }">Разное</a><span class="post__title-arrow">&nbsp;→</span>
-          <a href="https://habrahabr.ru/company/ibm/blog/302222/" class="post__title_link">IBM запускает первые высокозащищенные облачные блокчейн-сервисы</a>
-        
-      </h2>
-        <div class="hubs">
-            <a href="https://habrahabr.ru/hub/itfinance/" class="hub " title="Вы не подписаны на этот хаб" onclick="if (typeof ga === &#39;function&#39;) { ga(&#39;send&#39;, &#39;event&#39;, &#39;hub&#39;, &#39;feed page&#39;, &#39;Финансы в IT&#39;); }">Финансы в IT</a>, 
-            <a href="https://habrahabr.ru/company/ibm/" class="hub " title="Вы не подписаны на этот хаб" onclick="if (typeof ga === &#39;function&#39;) { ga(&#39;send&#39;, &#39;event&#39;, &#39;hub&#39;, &#39;feed page&#39;, &#39;Блог компании IBM&#39;); }">Блог компании IBM</a>
-        </div>
-    </div>
-    <div class="post__body post__body_crop ">
-      <div class="content html_format"><b>Блокчейн-сервисы на базе IBM Cloud предназначены для финансовых учреждений, организаций государственного сектора и сферы здравоохранения</b><br>
-  <br>
-     <%= link_to image_tag(film.uploaded_file.url, width: 500, height: 289), film_path(film)%><br>
-   <br>
-  Как уже сообщалось, в январе этого года наша компания открыла blockchain-лабораторию. Проект стартовал при поддержке партнера — некоммерческой организации Innovate Finance. Цель проекта — изучение дополнительных возможностей технологии blockchain с использованием значительных вычислительных и аналитических мощностей компании. <br>
-  <br>
-  Сейчас партнеры уже довольно далеко продвинулись в рамках проекта, поэтому было решено запустить первые сервисы на основе указанной технологии. Здесь стоит напомнить, что <a href="https://ru.wikipedia.org/wiki/%D0%A6%D0%B5%D0%BF%D0%BE%D1%87%D0%BA%D0%B0_%D0%B1%D0%BB%D0%BE%D0%BA%D0%BE%D0%B2_%D1%82%D1%80%D0%B0%D0%BD%D0%B7%D0%B0%D0%BA%D1%86%D0%B8%D0%B9">сети блокчейн</a> основаны на концепции децентрализованного контроля, однако некоторые облачные среды сохраняют уязвимость, которая допускает взлом информационных систем и неавторизованный доступ. Команда IBM, состоящая из экспертов по информационной безопасности, криптографов, экспертов по аппаратному обеспечению и исследователей, создала принципиально новые облачные сервисы для устойчивых к взлому доверенных сетей на технологии блокчейна. <br>
-  </div>
-        <div class="buttons" style="padding: 20px 0 0;">
-          <a class="button" href="https://habrahabr.ru/company/ibm/blog/302222/#habracut">Читать дальше →</a>
-        </div>
-      
-    </div>
-    <div class="post__footer">
-        <div class="infopanel_wrapper js-user_">
-      <ul class="postinfo-panel " id="infopanel_post_302222">
-            <li class="postinfo-panel__item">
-              <div class="voting-wjt voting-wjt_infopanel js-voting  ">
-                  <button type="button" disabled="" class="voting-wjt__button voting-wjt__button_plus js-plus" title="Голосовать могут только зарегистрированные пользователи.">
-                    <span>↑</span>
-                  </button>
-                <div class="voting-wjt__counter voting-wjt__counter_positive  js-mark">
-                    <span class="voting-wjt__counter-score js-score" title="Общий рейтинг 10: ↑8 и ↓2">+6</span>
-                </div>
-                  <button type="button" disabled="" class="voting-wjt__button voting-wjt__button_minus js-minus" title="Голосовать могут только зарегистрированные пользователи.">
-                    <span>↓</span>
-                  </button>
-              </div>
-            </li>
-        <li class="postinfo-panel__item">
-          <div class="views-count_post" title="Просмотры публикации">2,9k</div>
-        </li>
-        <li class="postinfo-panel__item">
-          <div class="favorite-wjt favorite">
-              <button type="button" disabled="" class="favorite-wjt__button favorite-wjt__button_disabled" onclick="return false;" title="Только зарегистрированные пользователи могут добавлять публикации в избранное">
-                <span>Добавить в избранное</span>
-              </button>
-            <span class="favorite-wjt__counter js-favs_count" title="Количество пользователей, добавивших публикацию в избранное">9</span>
-          </div>
-        </li>
-                <li class="postinfo-panel__item post-author">
-                  <a title="Автор публикации" class="post-author__link" href="https://habrahabr.ru/users/marks/">
-                      <img src="./Интересные публикации _ Хабрахабр_files/877493d580304894f45ddf1a4844de04.jpg" class="post-author__pic">@marks
-                  </a>
-                </li>
-              <li class="postinfo-panel__item postinfo-panel__item_comments">
-                <div class="post-comments">
-                    <a href="https://habrahabr.ru/company/ibm/blog/302222/#comments" class="post-comments__link post-comments__link_all" title="Читать комментарии">5</a>
-                </div>
-              </li>
-        <!-- шеринг в соцсети -->
-        <!-- кнопка пожаловаться -->
-      </ul>
-    </div>
-    </div>
-  </div>
-  <%end%>
-</div>
-
-
-
-
-
-
-
-
-
-
-
         <div class="page-nav">
-
-        <ul class="next-prev">
-          <li><span>←</span>&nbsp;сюда</li>
-          <li><a title="На страницу вперед (Alt + →)" class="next" id="next_page" href="https://habrahabr.ru/page2/" rel="">туда</a>&nbsp;<span>→</span></li>
-        </ul>
-        <ul id="nav-pages">
-          <%if @films_last.present?%>
-            <li><a><%= render_pagination_box(@films) %> </a></li>
-            <li><a title="Последняя страница" href="https://habrahabr.ru/page100/" rel=""><span>→</span></a></li>
-          <%end%>  
-        </ul>
-      </div>
-
-
-
-
-
-        <form action="https://habrahabr.ru/json/favorites/" method="post" id="edit_tags_form" class="hidden">
-  <input type="hidden" name="action" value="add">
-  <input type="hidden" name="ti" value="0">
-  <input type="hidden" name="tt" value="0">
-  <label>Пометьте топик понятными вам метками, если хотите</label>
-  <input type="text" name="tags_string" class="tags_string" autocomplete="off">
-  <div class="description">Метки лучше разделять запятой. Например: <i>общение, социальные сети, myspace.com, подростки, мердок</i></div>
-  <div class="buttons">
-    <input type="submit" value="Сохранить" class="submit"> или <a href="https://habrahabr.ru/#" class="close" onclick="return close_edit_tags()">закрыть</a>
-  </div>
-</form>
-
+          <ul class="next-prev">  
+            <%if @films.present?%>
+              <%= will_paginate @films, :previous_label => 'Назад', :next_label => 'Вперед' %> 
+            <%end%> 
+          </ul>
+          <ul id="nav-pages">
+          
+          </ul>
+        </div>
       </div>
     </div>
-
-
-
-        
     <%=render "home/side_adversting"%>
-    
-  
-
-
   </div>
 </div>
 

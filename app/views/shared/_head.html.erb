@@ -7,21 +7,22 @@
         <%end%>
       </a>
       <a><%=link_to "Начальная", root_path, class: "#{@active}"%></a>
-      <a><%=link_to "Contac us", contact_us_films_path, class: "#{@contact_us}"%></a>
-      <a><%=link_to "My Blog", blog_films_path, class: "#{@active_blog}"%></a>
+      <a><%=link_to "Связаться", contact_us_films_path, class: "#{@contact_us}"%></a>
+      
       <%if user_signed_in?%>
-        <a><%=link_to "Not published", not_published_films_path, class: "#{@active_about_us}"%></a>
+        <a><%=link_to "Мои статьи", blog_films_path, class: "#{@active_blog}"%></a>
+        <a><%=link_to "Не опубликованные", not_published_films_path, class: "#{@active_about_us}"%></a>
       <%end%>
     </div>
     <div class="bmenu_inner" style="display:inline-block!important;visibility:visible!important;">
 
       <span class="bmenu slink">
         <%if user_signed_in?%>
-          <a><%= link_to 'Add article',  new_film_path, class: "#{@active_log_in}" %></a>
-          <a> <%= link_to 'Sign out',  destroy_user_session_path, :method => :delete  %></a>
+          <a><%= link_to 'Добавить статью',  new_film_path, class: "#{@active_log_in}" %></a>
+          <a> <%= link_to 'Выйти',  destroy_user_session_path, :method => :delete  %></a>
         <%else%>
-          <a><%=link_to "Log in", new_user_session_path%></a>
-          <a><%=link_to "Sign up", new_user_registration_path%></a>
+          <a><%=link_to "Войти", new_user_session_path%></a>
+          <a><%=link_to "Зарегестрироваться", new_user_registration_path%></a>
         <%end%>  
       </span>
       <span id="adriver_banner_465568687" title=""></span>

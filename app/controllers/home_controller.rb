@@ -6,36 +6,29 @@ class HomeController < ApplicationController
 
   def search
     @films = Film.where(send_new_film: false).search_everywhere(params[:query]).paginate(:page => params[:page], :per_page => Configurable[:blogs_per_page])
-    all_tag=AllTag.first
-    if all_tag.present?
-      @all_tags=Array(all_tag.take_all_tag)
-    end
+    set_parameters
   end  
   
   def search_tags
-     @films = Film.where(send_new_film: false).search_everywhere(params[:tag]).paginate(:page => params[:page], :per_page => Configurable[:blogs_per_page])
-    all_tag=AllTag.first
-    if all_tag.present?
-      @all_tags=Array(all_tag.take_all_tag)
-    end
+    @films = Film.where(send_new_film: false).search_everywhere(params[:tag]).paginate(:page => params[:page], :per_page => Configurable[:blogs_per_page])
+    set_parameters
     render "home/all_film"
   end
     
   def all_film
     @films = Film.where(send_new_film: false).paginate(:page => params[:page], :per_page => Configurable['blogs_per_page'])
-    @count=@films.count
-    @films_first=@films.paginate(:page => params[:page], :per_page => Configurable['blogs_per_page'])
-    if @count>2
-      @films_last=@films[3..@count].paginate(:page => params[:page], :per_page => Configurable['blogs_per_page'])
-    end
-
-    all_tag=AllTag.first
-    if all_tag.present?
-      @all_tags=Array(all_tag.take_all_tag)
-    end
+    set_parameters
     @resourse='Film'
     @active='current'
     render "home/all_film"
   end	
+  
+  def set_parameters
+    @films_down=@films.sample(4)
+    all_tag=AllTag.first
+    if all_tag.present?
+      @all_tags=Array(all_tag.take_all_tag).sample(5)
+    end
+  end
 
 end

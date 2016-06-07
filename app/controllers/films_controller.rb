@@ -4,7 +4,7 @@ class FilmsController < ApplicationController
   before_action :authenticate_user!, :only => [:blog, :edit, :new, :create, :update,:destroy, :not_published]    
   before_action :set_film, only: [:show_modal,:get, :upload, :show, :edit, :update, :destroy, :upvote, :downvote ]
   before_action :define_eccept, only: [:edit, :update, :destroy]
-  
+  before_action :all_tags, only: [:show, :contact_us]
   #before_action :set_active, only: [:support, :active, :about_us, :contact_us, :blog]
   #before_action :cul_user, :except => [:show, :index]  
  
@@ -20,7 +20,7 @@ class FilmsController < ApplicationController
   def show
     all_tag=AllTag.first
     if all_tag.present?
-      @all_tags=Array(all_tag.take_all_tag)
+      @all_tags=Array(all_tag.take_all_tag).sample(5)
     end
     
     @user=User.find(@film.user_id)
@@ -106,23 +106,23 @@ class FilmsController < ApplicationController
   end 
 
   def blog
-    @films_first=current_user.films.where(send_new_film: false).paginate(:page => params[:page], :per_page => Configurable['blogs_per_page']) 
-    @films_first=Film.first
-    if AllTag.first.present?
-      @all_tags=Array(AllTag.first.all_list.split(","))
-    end
-    if @films_first.present?
-      @user=User.find(@films_first.user_id)
-      @info=@user.info
-      @commentable=@films_first
+    @films=current_user.films.where(send_new_film: false).paginate(:page => params[:page], :per_page => Configurable['blogs_per_page']) 
+    @films_down=@films.sample(4)
+    all_tag=AllTag.first
+    if all_tag.present?
+      @all_tags=Array(all_tag.take_all_tag).sample(5)
     end
     @active_blog="current"
   end 
 
-
-
   def not_published
-    @films_first = current_user.films.where(send_new_film: true).paginate(:page => params[:page], :per_page => Configurable['blogs_per_page'])
+    @films = Film.where(send_new_film: true).paginate(:page => params[:page], :per_page => Configurable['blogs_per_page'])
+    
+    @films_down=@films.sample(4)
+    all_tag=AllTag.first
+    if all_tag.present?
+      @all_tags=Array(all_tag.take_all_tag).sample(5)
+    end
     @active_about_us="current"
   end 
   
@@ -141,18 +141,20 @@ class FilmsController < ApplicationController
     render "all_film"
   end
 
-  def latest
-    @films = Film.where(send_new_film: false).order('created_at DESC').paginate(:page => params[:page], :per_page => Configurable['blogs_per_page'])
+  def other
+    @films = Film.where(send_new_film: false).sample(Film.count).paginate(:page => params[:page], :per_page => Configurable['blogs_per_page'])
+    @films_down=@films.sample(4)
+    all_tag=AllTag.first
+    if all_tag.present?
+      @all_tags=Array(all_tag.take_all_tag).sample(5)
+    end
     render "all_film"
   end
-
-
 
   def contact_us 
     @messagestoadministrator=Messagestoadministrator.new
     @active_contact_us="current"
   end  
-
 
   def get 
     if @film
@@ -164,12 +166,18 @@ class FilmsController < ApplicationController
   #  title.chomp.titleize
   #end
 
-
-  
-
-
   
   private
+  
+
+  def all_tags
+    @films = Film.where(send_new_film: false).paginate(:page => params[:page], :per_page => Configurable['blogs_per_page'])
+    @films_down=@films.sample(4)
+    all_tag=AllTag.first
+    if all_tag.present?
+      @all_tags=Array(all_tag.take_all_tag).sample(5)
+    end
+  end
 
   def define_eccept   
     if current_user.films.where(id: @film.id).present? || can_manage(current_user.films, @film, Film)

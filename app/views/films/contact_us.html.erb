@@ -53,38 +53,9 @@
 </div>
   <div class="column-wrapper js-sticky-wrapper">
     <div class="content_left js-content_left">
-        <div class="tabs">
-    <ul class="tabs-menu tabs-menu_habrahabr">
-        <li class="tabs-menu__item tabs-menu__item_inline">
-          <a href="https://habrahabr.ru/all/" class="tab-item ">
-            <span class="tab-item__value">
-              Все подряд&nbsp;
-              <strong class="counter"></strong>
-              <strong class="counter_new">+40</strong>
-            </span>
-          </a>
-        </li>
-        <li class="tabs-menu__item tabs-menu__item_inline">
-          <a href="https://habrahabr.ru/top/" class="tab-item ">
-            <span class="tab-item__value">
-              Лучшие&nbsp;
-              <strong class="counter"></strong>
-              
-            </span>
-          </a>
-        </li>
-        <li class="tabs-menu__item tabs-menu__item_inline">
-          <a href="https://habrahabr.ru/interesting/" class="tab-item tab-item_current">
-            <span class="tab-item__value">
-              Интересные&nbsp;
-              <strong class="counter"></strong>
-              
-            </span>
-          </a>
-        </li>
-    </ul>
-
-  </div>
+      <div class="tabs">
+        <%=render "home/small_navbar"%>
+      </div>
 
 
 
@@ -103,7 +74,7 @@
                   <%= f.text_field :email, value: "#{current_user.email}", size: "40"%>
       
                <%else%>
-         ]
+         
                    <%= f.text_field :name, size: "40"%>
              
                   <%= f.text_field :telephone, size: "40"%>
@@ -121,37 +92,7 @@
           <%end%>
 
 
-
-
-
-
-
-
         </div>
-        <div class="page-nav">
-
-        <ul class="next-prev">
-          <li><span>←</span>&nbsp;сюда</li>
-          <li><a title="На страницу вперед (Alt + →)" class="next" id="next_page" href="https://habrahabr.ru/page2/" rel="">туда</a>&nbsp;<span>→</span></li>
-        </ul>
-        <ul id="nav-pages">
-          
-        </ul>
-      </div>
-
-
-        <form action="https://habrahabr.ru/json/favorites/" method="post" id="edit_tags_form" class="hidden">
-  <input type="hidden" name="action" value="add">
-  <input type="hidden" name="ti" value="0">
-  <input type="hidden" name="tt" value="0">
-  <label>Пометьте топик понятными вам метками, если хотите</label>
-  <input type="text" name="tags_string" class="tags_string" autocomplete="off">
-  <div class="description">Метки лучше разделять запятой. Например: <i>общение, социальные сети, myspace.com, подростки, мердок</i></div>
-  <div class="buttons">
-    <input type="submit" value="Сохранить" class="submit"> или <a href="https://habrahabr.ru/#" class="close" onclick="return close_edit_tags()">закрыть</a>
-  </div>
-</form>
-
       </div>
     </div>
 

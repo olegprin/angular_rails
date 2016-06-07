@@ -2,8 +2,8 @@
 
 
 
-<div class="text_for_film">
-<%= bootstrap_form_for(@film, label_errors: true, layout: :vertical, label_col: "col-sm-2", control_col: "col-sm-50", multipart: true) do |f| %>
+
+<%= bootstrap_form_for(@film, layout: :vertical, multipart: true) do |f| %>
  
 
  <%#= errors_for(@film)%>
@@ -12,9 +12,9 @@
 
   
     <%= f.text_field :title,  label: "title", placeholder: "title",:size => 160  %>  
-  
+    <div class="ck_text">
       <%= f.cktext_area  :description, :id => 'sometext', size: "30x10"  %>
-
+    </div>  
 
 
       <%= f.file_field :uploaded_file, label: "insert picture", placeholder: "picture" %>
@@ -34,7 +34,7 @@
              
             
             <%= f.button t('forms.buttons.submit'), data: {disable_with: "<i class='fa fa-refresh fa-spin'></i> Creating..."}  %>
-            </div>
+           
            
 <% end %>
-</div>
+
