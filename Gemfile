@@ -11,7 +11,7 @@ gem 'bootstrap_form'
 
 gem 'coffee-rails'
 gem 'jquery-rails'
-gem 'dynamic_sitemaps'
+
 gem 'jbuilder'
 gem 'turbolinks', '~> 5.0.0.beta'
 gem "paperclip"
@@ -20,8 +20,18 @@ gem 'jquery-turbolinks'
 gem 'therubyracer'
 gem 'bootstrap-sass'
 gem 'sass-rails'
+
+
+
+gem 'dynamic_sitemaps'
 gem 'friendly_id'
 gem 'whenever', :require => false
+
+
+
+
+
+
 gem 'jquery-ui-rails'
 gem 'non-stupid-digest-assets', '~> 1.0.4'
 gem 'redcarpet'

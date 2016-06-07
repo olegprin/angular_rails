@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+<url>
+<loc>http://mkdev.me/</loc>
+<lastmod>2016-06-07T14:15:11+00:00</lastmod>
+<changefreq>daily</changefreq>
+<priority>1.0</priority>
+</url>
+<url>
+<loc>http://mkdev.me/films</loc>
+</url>
+<url>
+<loc>http://mkdev.me/films/first</loc>
+</url>
+<url>
+<loc>http://mkdev.me/films/second</loc>
+</url>
+<url>
+<loc>http://mkdev.me/films/three</loc>
+</url>
+</urlset>

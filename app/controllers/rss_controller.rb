@@ -8,7 +8,7 @@ class RssController < ApplicationController
     end
   end
 
-   def sitemap
+  def sitemap
     path = Rails.root.join("public", "sitemaps", current_site.key, "sitemap.xml")
     if File.exists?(path)
       render xml: open(path).read

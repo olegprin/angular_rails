@@ -3,7 +3,14 @@ Rails.application.routes.draw do
   
   
   mount Ckeditor::Engine => '/ckeditor'
-  get 'feed' => 'rss#feed', format: 'rss' 
+  get 'rss' => 'rss#feed', format: 'rss' 
+  #get 'sitemap' => 'home#sitemap'
+  get 'robots' => 'home#robots', format: :text
+  #get "sitemap.xml" => "rss#sitemap", format: :xml, as: :sitemap
+  #get "robots.txt" => "rss#robots", format: :text, as: :robots
+
+
+
   resources :comments
 
   resources :infos
@@ -25,7 +32,7 @@ Rails.application.routes.draw do
     
 
 
-    resources :messagestoadministrators
+  resources :messagestoadministrators
   resources :answerfrommoderators
 
   
@@ -64,11 +71,9 @@ Rails.application.routes.draw do
   
   resources :infos 
 
-  get "sitemap.xml" => "rss#sitemap", format: :xml, as: :sitemap
-  get "robots.txt" => "rss#robots", format: :text, as: :robots
 
 
- resources :films do
+  resources :films do
  
     resources :comments, module: :films do
       collection do

@@ -23,6 +23,17 @@ class HomeController < ApplicationController
     render "home/all_film"
   end	
   
+  def robots
+    @posts = Film.can_publish
+  end
+
+  def sitemap
+    respond_to do |format|
+      format.xml { render file: 'public/sitemaps/sitemap.xml' }
+      format.html { redirect_to root_url }
+    end
+  end
+
   def set_parameters
     @films_down=@films.sample(4)
     all_tag=AllTag.first
