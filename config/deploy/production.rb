@@ -21,7 +21,7 @@ set :rails_env, 'production'
 #server '146.148.118.22', user: 'deploy', roles: %w{web app db}
 
 #digital
-server '104.155.1.142', user: 'deploy', roles: %w{web app db}
+server '130.211.83.40', user: 'deploy', roles: %w{web app db}
 
 
 # role-based syntax

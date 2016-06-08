@@ -1,14 +1,12 @@
 
 <div class="post post_teaser shortcuts_item" id="post_302506">
   <div class="post__header">
-    <span class="post__time_published"><%= time_ago_in_words(film.created_at)%> назад
-    </span>
     <h2 class="post__title">
       <a><%= link_to "#{film.title}", film_path(film) %></a>
     </h2>
 
     <div class="hubs">
-      <%=delete_symblol(film.language).join(",")%> 
+      Tags: <%=delete_symblol(film.language).join(",")%> 
       <%=link_to "Comments #{film.comments.count}", film_path(film)%>
         <%if user_signed_in?%>  
           <%if can_manage(current_user.films, film, Film)%>
@@ -16,6 +14,7 @@
             <%= link_to 'delete', @film, method: :delete, data: { confirm: 'Are you sure?' } %> 
            <%end%> 
         <%end%> 
+        Напечатано <%= time_ago_in_words(film.created_at)%> назад
     </div>
   </div>
       
@@ -24,14 +23,14 @@
     <div class="content html_format_image">
       <%= link_to image_tag(film.uploaded_file.url, width: 500, height: 289), film_path(film)%>
     </div>
-      <%if other_params(params[:action], params[:controller])  %>
+      <%if other_params(params[:action], params[:controller], params[:action])  %>
         <div class="content html_format_article"> 
           <%=sanitize(film.description)%>
         </div>    
       <%else%>  
         <%=sanitize(film.description)%>
       <%end%>  
-    <%if other_params(params[:action], params[:controller]) %>
+    <%if other_params(params[:action], params[:controller], params[:action]) %>
       <div class="buttons" style="padding: 4px;">
         <a><%= ui_button 'read', "Читать дальше", film_path(film) %> </a>
       </div>

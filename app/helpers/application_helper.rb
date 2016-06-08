@@ -12,8 +12,8 @@ module ApplicationHelper
     end
   end
   
-  def other_params(params1,params2)
-    params1=="other" || params2=="home"
+  def other_params(params1,params2,params3)
+    params1=="other" || params2=="home" || params3=="blog"
   end
 
 
