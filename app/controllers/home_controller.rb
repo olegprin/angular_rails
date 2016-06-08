@@ -24,10 +24,10 @@ class HomeController < ApplicationController
   end	
 
   def set_parameters
-    @films_down=@films.sample(4)
+    @films_down=@films.sample(Configurable['films_down_page'])
     all_tag=AllTag.first
     if all_tag.present?
-      @all_tags=Array(all_tag.take_all_tag).sample(5)
+      @all_tags=Array(all_tag.take_all_tag).sample(Configurable['tags_per_page'])
     end
   end
   

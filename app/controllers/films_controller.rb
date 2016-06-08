@@ -20,7 +20,7 @@ class FilmsController < ApplicationController
   def show
     all_tag=AllTag.first
     if all_tag.present?
-      @all_tags=Array(all_tag.take_all_tag).sample(5)
+      @all_tags=Array(all_tag.take_all_tag).sample(Configurable['tags_per_page'])
     end
     
     @user=User.find(@film.user_id)
@@ -38,11 +38,6 @@ class FilmsController < ApplicationController
       end
   end
 
-  def search
-    @search=params[:search].titleize
-    @films = Film.where(["title LIKE ?", @search]).paginate(:page => params[:page], :per_page => Configurable['blogs_per_page'])
-    render "all_film"
-  end  
   # GET /films/new
   def new
     @film = Film.new
@@ -104,21 +99,21 @@ class FilmsController < ApplicationController
   end 
 
   def blog
-    @films=current_user.films.can_publish_paginates
-    @films_down=@films.sample(4)
+    @films=current_user.films.can_publish_paginate(params[:page], Configurable['blogs_per_page'])
+    @films_down=@films.sample(Configurable['films_down_page'])
     all_tag=AllTag.first
     if all_tag.present?
-      @all_tags=Array(all_tag.take_all_tag).sample(5)
+      @all_tags=Array(all_tag.take_all_tag).sample(Configurable['tags_per_page'])
     end
     @active_blog="current"
   end 
 
   def not_published
-    @films = Film.can_publish_paginate
-    @films_down=@films.sample(4)
+    @films = Film.can_publish_paginate(params[:page], Configurable['blogs_per_page'])
+    @films_down=@films.sample(Configurable['films_down_page'])
     all_tag=AllTag.first
     if all_tag.present?
-      @all_tags=Array(all_tag.take_all_tag).sample(5)
+      @all_tags=Array(all_tag.take_all_tag).sample(Configurable['tags_per_page'])
     end
     @active_about_us="current"
   end 
@@ -139,10 +134,10 @@ class FilmsController < ApplicationController
 
   def other
     @films = Film.can_publish.sample(Film.count).paginate(:page => params[:page], :per_page => Configurable['blogs_per_page'])
-    @films_down=@films.sample(4)
+    @films_down=@films.sample(Configurable['films_down_page'])
     all_tag=AllTag.first
     if all_tag.present?
-      @all_tags=Array(all_tag.take_all_tag).sample(5)
+      @all_tags=Array(all_tag.take_all_tag).sample(Configurable['tags_per_page'])
     end
     render "all_film"
   end
@@ -166,11 +161,11 @@ class FilmsController < ApplicationController
   private
   
   def all_tags
-    @films = Film.can_publish_paginate
-    @films_down=@films.sample(4)
+    @films = Film.can_publish_paginate(params[:page], Configurable['blogs_per_page'])
+    @films_down=@films.sample(Configurable['films_down_page'])
     all_tag=AllTag.first
     if all_tag.present?
-      @all_tags=Array(all_tag.take_all_tag).sample(5)
+      @all_tags=Array(all_tag.take_all_tag).sample(Configurable['tags_per_page'])
     end
   end
 

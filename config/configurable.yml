@@ -6,19 +6,19 @@
 blogs_per_page:
   name: blogs_per_page
   type: integer
-  default: 3
+  default: 4
 
 latest_per_page:
   name: latest_per_page
   type: integer
   default: 4
 
-all_film:
+tags_per_page:
   name: count of film first page
   type: integer
-  default: 4
+  default: 6
 
-random_per_page:
+films_down_page:
   name: random_per_page
   type: integer
   default: 6

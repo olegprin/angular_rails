@@ -44,12 +44,18 @@ class Film < ActiveRecord::Base
     can_publish.search_everywhere(parameter)
   end  
   
-  def self.can_publish_paginate
-    can_publish.paginate(:page => params[:page], :per_page => Configurable['films_per_page'])
+  def self.comment_paginate
+    comments.paginate(
+       :page => params[:page],
+       :per_page => Configurable[:blogs_per_page]
+    )
+  end
+    
+  def self.can_publish_paginate(page, per_page)
+    can_publish.paginate(:page => page, :per_page => per_page)
   end 
 
-  def
-   create_tags
+  def create_tags
     if self.send_new_film==false
     
       all_tag=AllTag.first  

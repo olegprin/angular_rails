@@ -24,15 +24,15 @@
     <div class="content html_format_image">
       <%= link_to image_tag(film.uploaded_file.url, width: 500, height: 289), film_path(film)%>
     </div>
-      <%if params[:action]=="all_film"%>
+      <%if other_params(params[:action], params[:controller])  %>
         <div class="content html_format_article"> 
           <%=sanitize(film.description)%>
         </div>    
       <%else%>  
         <%=sanitize(film.description)%>
       <%end%>  
-    <%if params[:action]=="all_film"%>
-      <div class="buttons" style="padding: 5px;">
+    <%if other_params(params[:action], params[:controller]) %>
+      <div class="buttons" style="padding: 4px;">
         <a><%= ui_button 'read', "Читать дальше", film_path(film) %> </a>
       </div>
     <%end%>    

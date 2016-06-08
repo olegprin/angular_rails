@@ -11,15 +11,15 @@
 
 
   
-    <%= f.text_field :title,  label: "title", placeholder: "title",:size => 160  %>  
+    <%= f.text_field :title, placeholder: "title",:size => 160  %>  
     <div class="ck_text">
       <%= f.cktext_area  :description, :id => 'sometext', size: "30x10"  %>
     </div>  
 
 
-      <%= f.file_field :uploaded_file, label: "insert picture", placeholder: "picture" %>
+      <%= f.file_field :uploaded_file, placeholder: "picture" %>
        
-      <%= f.text_field :language, placeholder: "add tags" %>
+      <%= f.text_field :language, label: "add tags",placeholder: "add tags" %>
 
   		<%#= f.fields_for :tags do |builder| %>
         <%#= builder.text_field :tag_type, placeholder: "add tag" %>

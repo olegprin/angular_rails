@@ -3,7 +3,6 @@ class ApplicationController < ActionController::Base
   # For APIs, you may want to use :null_session instead.
   protect_from_forgery with: :null_session, if: Proc.new { |c| c.request.format == 'application/json' }
  
-  before_action :set_latest
   helper_method :user_present?
   helper_method :role?
   helper_method :current_blog
@@ -34,11 +33,6 @@ class ApplicationController < ActionController::Base
       false
     end
   end  
-
-  def set_latest
-    @films_latest = Film.where(send_new_film: false).order('created_at DESC').sample(Configurable.latest_per_page) 
-    @films_random = Film.where(send_new_film: false).take(Configurable['random_per_page']) 
-  end    
 
   rescue_from Cinema::NotFound do
     render_404

@@ -1,41 +1,41 @@
 
     <div class="sidebar_right js-sidebar_right">
-          <div class="xyz_wrapper is_visible">
-    <div class="xyz_wrapper_inner">
-      <span class="xyz_wrapper_text">Реклама помогает поддерживать и&nbsp;развивать наши сервисы<br><br><a href="https://habrahabr.ru/adblock/" target="_blank">[подробнее]</a></span>
-      <div class="no_please_one_one_one" style="min-height: 270px;">
-        <script type="text/javascript">
-          if (typeof(pr) == 'undefined') { var pr = Math.floor(Math.random() * 4294967295) + 1; }
-          if (typeof(document.referrer) != 'undefined') {
-            if (typeof(afReferrer) == 'undefined') {
-              afReferrer = encodeURIComponent(document.referrer);
-            }
-          } else {
-            afReferrer = '';
-          }
-          var addate = new Date();
-          var dl = encodeURIComponent(document.location);
-          var pr1 = Math.floor(Math.random() * 4294967295) + 1;
-          document.write('<div id="AdFox_banner_'+pr1+'" style="background:#fff;"><\/div>');
-          document.write('<div style="visibility:hidden; position:absolute;"><iframe id="AdFox_iframe_'+pr1+'" width=1 height=1 marginwidth=0 marginheight=0 scrolling=no frameborder=0><\/iframe><\/div>');
-          AdFox_getCodeScript(1,pr1,'//ads.adfox.ru/249077/prepareCode?pp=g&amp;ps=cgto&amp;p2=fjon&amp;pct=a&amp;plp=a&amp;pli=a&amp;pop=a&amp;pr=' + pr +'&amp;pt=b&amp;pd=' + addate.getDate() + '&amp;pw=' + addate.getDay() + '&amp;pv=' + addate.getHours() + '&amp;prr=' + afReferrer + '&amp;dl='+dl+'&amp;pr1='+pr1);
-        </script><div id="AdFox_banner_1678885372" style="width: 300px; height: 500px; position: relative;"><iframe id="adfoxHtml5_iframe_1678885372" marginwidth="0" marginheight="0" scrolling="no" frameborder="0" style="width: 300px; height: 500px;"></iframe></div><div style="visibility:hidden; position:absolute;"><iframe id="AdFox_iframe_1678885372" width="1" height="1" marginwidth="0" marginheight="0" scrolling="no" frameborder="0"></iframe></div>
-      </div>
+      <div class="xyz_wrapper is_visible">
+        <div class="xyz_wrapper_inner">
+          <span class="xyz_wrapper_text">Реклама помогает поддерживать и&nbsp;развивать наши сервисы<br><br><a href="https://habrahabr.ru/adblock/" target="_blank">[подробнее]</a></span>
+          <div class="no_please_one_one_one" style="min-height: 270px;">
+            <script type="text/javascript">
+              if (typeof(pr) == 'undefined') { var pr = Math.floor(Math.random() * 4294967295) + 1; }
+              if (typeof(document.referrer) != 'undefined') {
+                if (typeof(afReferrer) == 'undefined') {
+                  afReferrer = encodeURIComponent(document.referrer);
+                }
+              } else {
+                afReferrer = '';
+              }
+              var addate = new Date();
+              var dl = encodeURIComponent(document.location);
+              var pr1 = Math.floor(Math.random() * 4294967295) + 1;
+              document.write('<div id="AdFox_banner_'+pr1+'" style="background:#fff;"><\/div>');
+              document.write('<div style="visibility:hidden; position:absolute;"><iframe id="AdFox_iframe_'+pr1+'" width=1 height=1 marginwidth=0 marginheight=0 scrolling=no frameborder=0><\/iframe><\/div>');
+              AdFox_getCodeScript(1,pr1,'//ads.adfox.ru/249077/prepareCode?pp=g&amp;ps=cgto&amp;p2=fjon&amp;pct=a&amp;plp=a&amp;pli=a&amp;pop=a&amp;pr=' + pr +'&amp;pt=b&amp;pd=' + addate.getDate() + '&amp;pw=' + addate.getDay() + '&amp;pv=' + addate.getHours() + '&amp;prr=' + afReferrer + '&amp;dl='+dl+'&amp;pr1='+pr1);
+            </script><div id="AdFox_banner_1678885372" style="width: 300px; height: 500px; position: relative;"><iframe id="adfoxHtml5_iframe_1678885372" marginwidth="0" marginheight="0" scrolling="no" frameborder="0" style="width: 300px; height: 500px;"></iframe></div><div style="visibility:hidden; position:absolute;"><iframe id="AdFox_iframe_1678885372" width="1" height="1" marginwidth="0" marginheight="0" scrolling="no" frameborder="0"></iframe></div>
+          </div>
+        </div>
+      <a href="https://special.habrahabr.ru/advertising/" class="firskill__label">Реклама</a>
     </div>
-    <a href="https://special.habrahabr.ru/advertising/" class="firskill__label">Реклама</a>
-  </div>
-        
-  <div class="sidebar-block sidebar-block_top-hubs js-tophubs">
-    <h2 class="sidebar-block__title">Потоки</h2>
-    <ul class="content-list top-flows">
-      <%@all_tags.each do |tag|%>
-        <li class="content-list__item top-flows__item">
-          <a><%= link_to "#{tag}", results_tags_path(tag), class: "content-list__item-link top-flows__item-title"%></a>
-          <strong class="top-flows__item-counter" title="Количество новых публикаций за 24 часа"></strong>
-        </li>
-      <%end%>  
-    </ul>
-  </div>
+          
+    <div class="sidebar-block sidebar-block_top-hubs js-tophubs">
+      <h2 class="sidebar-block__title">Потоки</h2>
+      <ul class="content-list top-flows">
+        <%@all_tags.each do |tag|%>
+          <li class="content-list__item top-flows__item">
+            <a><%= link_to "#{tag}", results_tags_path(tag), class: "content-list__item-link top-flows__item-title"%></a>
+            <strong class="top-flows__item-counter" title="Количество новых публикаций за 24 часа"></strong>
+          </li>
+        <%end%>  
+      </ul>
+    </div>
           <div class="wrapper-sticky" style="display: block; height: 512px; width: auto; margin: auto; position: relative; float: none; left: auto; right: auto; top: auto; bottom: auto; vertical-align: top;"><div class="js-ad_sticky" style="width: 300px; top: 0px; bottom: auto; left: 0px; right: auto; position: absolute;"><div class="xyz_wrapper">
   <div class="xyz_wrapper_inner">
     <span class="xyz_wrapper_text">Реклама помогает поддерживать и&nbsp;развивать наши сервисы<br><br><a href="https://habrahabr.ru/adblock/" target="_blank">[подробнее]</a></span>

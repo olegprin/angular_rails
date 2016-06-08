@@ -11,6 +11,11 @@ module ApplicationHelper
        File.new(filename).read.html_safe
     end
   end
+  
+  def other_params(params1,params2)
+    params1=="other" || params2=="home"
+  end
+
 
   def delete_symblol(symbol)
     symbol.gsub(/\W/, ",").split(",").reject(&:empty?)
