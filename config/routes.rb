@@ -5,9 +5,9 @@ Rails.application.routes.draw do
   mount Ckeditor::Engine => '/ckeditor'
   get 'rss' => 'rss#feed', format: 'rss' 
   #get 'sitemap' => 'home#sitemap'
-  get 'robots' => 'home#robots', format: :text
-  #get "sitemap.xml" => "rss#sitemap", format: :xml, as: :sitemap
-  #get "robots.txt" => "rss#robots", format: :text, as: :robots
+  #get 'robots' => 'home#robots', format: :text
+  get "sitemap" => "rss#sitemap", format: :xml, as: :sitemap
+  get "robots" => "rss#robots", format: :text, as: :robots
 
 
 

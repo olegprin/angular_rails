@@ -1,5 +1,7 @@
 User-agent: *
 <% @posts.each do |p| %>
-Disallow: <%= post_url(p) %>
+<%= film_url(p) %>
 <% end %>
-Sitemap: http://mkdev.me/sitemap.xml
+
+
+Sitemap: <%= sitemap_url %>

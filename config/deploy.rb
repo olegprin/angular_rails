@@ -10,6 +10,14 @@ set :deploy_to, '/home/deploy/shop'
 
 
 
+
+
+
+
+set :whenever_command, "bundle exec whenever"
+require "whenever/capistrano"
+
+
 #after "deploy", "deploy:restart_daemons" 
 #after "deploy:update_code", "sitemaps:create_symlink"
 #namespace :sitemaps do
@@ -40,6 +48,25 @@ set :rbenv_roles, :all # default value
 
 set :linked_files, %w{config/database.yml config/secrets.yml}
 set :linked_dirs, %w{bin log tmp/pids tmp/cache tmp/sockets vendor/bundle public/system public/image}
+
+
+
+#SITEMAP
+after "deploy:update_code", "sitemaps:create_symlink"
+
+namespace :sitemaps do
+  task :create_symlink, roles: :app do
+    run "mkdir -p #{shared_path}/sitemaps"
+    run "rm -rf #{release_path}/public/sitemaps"
+    run "ln -s #{shared_path}/sitemaps #{release_path}/public/sitemaps"
+  end
+end
+
+
+
+
+
+
 
 namespace :deploy do
 

@@ -9,11 +9,9 @@ class RssController < ApplicationController
   end
 
   def sitemap
-    path = Rails.root.join("public", "sitemaps", current_site.key, "sitemap.xml")
-    if File.exists?(path)
-      render xml: open(path).read
-    else
-      render text: "Sitemap not found.", status: :not_found
+    respond_to do |format|
+      format.xml { render file: 'public/sitemaps/sitemap.xml' }
+      format.html { redirect_to root_url }
     end
   end
 
