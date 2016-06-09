@@ -2,6 +2,7 @@ Rails.application.routes.draw do
 
   
   
+  resources :angulars
   mount Ckeditor::Engine => '/ckeditor'
   get 'rss' => 'rss#feed', format: 'rss' 
   #get 'sitemap' => 'home#sitemap'

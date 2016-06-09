@@ -1,0 +1,16 @@
+= form_for @angular do |f|
+  - if @angular.errors.any?
+    #error_explanation
+      %h2= "#{pluralize(@angular.errors.count, "error")} prohibited this angular from being saved:"
+      %ul
+        - @angular.errors.full_messages.each do |msg|
+          %li= msg
+
+  .field
+    = f.label :title
+    = f.text_field :title
+  .field
+    = f.label :body
+    = f.text_field :body
+  .actions
+    = f.submit 'Save'

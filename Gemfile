@@ -26,7 +26,7 @@ gem 'sass-rails'
 gem 'dynamic_sitemaps'
 gem 'friendly_id'
 gem 'whenever', :require => false
-
+gem 'angularjs-rails'
 
 
 

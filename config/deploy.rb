@@ -14,8 +14,8 @@ set :deploy_to, '/home/deploy/shop'
 
 
 
-set :whenever_command, "bundle exec whenever"
-require "whenever/capistrano"
+#set :whenever_command, "bundle exec whenever"
+#require "whenever/capistrano"
 
 
 #after "deploy", "deploy:restart_daemons" 
@@ -52,15 +52,15 @@ set :linked_dirs, %w{bin log tmp/pids tmp/cache tmp/sockets vendor/bundle public
 
 
 #SITEMAP
-after "deploy:update_code", "sitemaps:create_symlink"
+#after "deploy:update_code", "sitemaps:create_symlink"
 
-namespace :sitemaps do
-  task :create_symlink, roles: :app do
-    run "mkdir -p #{shared_path}/sitemaps"
-    run "rm -rf #{release_path}/public/sitemaps"
-    run "ln -s #{shared_path}/sitemaps #{release_path}/public/sitemaps"
-  end
-end
+#namespace :sitemaps do
+  #task :create_symlink, roles: :app do
+    #run "mkdir -p #{shared_path}/sitemaps"
+    #run "rm -rf #{release_path}/public/sitemaps"
+    #run "ln -s #{shared_path}/sitemaps #{release_path}/public/sitemaps"
+  #end
+#end
 
 
 

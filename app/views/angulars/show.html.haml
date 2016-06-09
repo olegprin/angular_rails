@@ -1,0 +1,12 @@
+%p#notice= notice
+
+%p
+  %b Title:
+  = @angular.title
+%p
+  %b Body:
+  = @angular.body
+
+= link_to 'Edit', edit_angular_path(@angular)
+\|
+= link_to 'Back', angulars_path

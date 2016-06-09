@@ -12,15 +12,12 @@
 //
 
 //= require jquery
-//= require bootstrap-sprockets
-//= require script
-//= require coin-slider
+//= require bootstrap
+//= require angular
+//= require angular-resource
+//= require angular-route
 
-//= require home
-//= require films
-// require ckeditor/override
-//= require ckeditor/init
 
-//= require jquery_ujs
-//= require jquery-ui
-// require turbolinks
+
+//= require_self
+//= require_tree ./Controllers/main
