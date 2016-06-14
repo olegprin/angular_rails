@@ -5,6 +5,9 @@ class AngularsController < ApplicationController
   # GET /angulars.json
   def index
     @angulars = Angular.all
+
+   @film=Film.first
+   #render json: @film
   end
 
   # GET /angulars/1
