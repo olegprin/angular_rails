@@ -22,7 +22,7 @@ gem 'bootstrap-sass'
 gem 'sass-rails'
 
 
-
+gem 'angular-rails-templates'
 gem 'dynamic_sitemaps'
 gem 'friendly_id'
 gem 'whenever', :require => false

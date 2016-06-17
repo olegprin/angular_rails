@@ -11,13 +11,14 @@
 // about supported directives.
 //
 
-//= require jquery
+
 //= require bootstrap
 //= require angular
 //= require angular-resource
 //= require angular-route
-
+//= require main
 
 
 //= require_self
-//= require_tree ./Controllers/main
+//= require_tree ./controllers/main
+//= require_tree .
