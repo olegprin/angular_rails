@@ -1,1 +1,142 @@
-<%=render partial: "home/all_film"%>
+ <script type="text/javascript">
+function Car(name){
+  this.name=name;
+  this.color="red";
+  this.getInfo = function() {
+    return this.color+ " " + "by olesa"
+  };
+}
+
+
+
+myCar_model = new Car("ford")
+myCar_model.color="love oleg"
+myCar=myCar_model.getInfo()
+console.log(myCar)
+</script>
+
+ <script type="text/javascript">
+function Car(model,year,miles) {
+ this.model=model;
+ this.year=year;
+ this.miles=miles;
+}
+Car.prototype.toZalypa = function () {
+  return this.model + " has done " + this.miles + " miles";
+};
+
+zer=new Car("por","tt","444");
+console.log(zer.toZalypa());
+//var obj=Object.prototype.toString
+
+</script>
+
+module
+<script type="text/javascript">
+var newObj={
+  myProp: "dd",
+  myConf: {
+  	len: "en",
+    cashing: true
+  },
+
+  saySom: function(){
+    console.log("olesa");
+  },
+  
+  reportConfig: function(){
+    console.log("cashing is"+" " + (this.myConf.cashing ? "enable" : "disable"));
+  }, 
+  
+  updateConf: function(parameter){
+    if (typeof parameter==="object"){
+      this.myConf=parameter;
+      console.log(this.myConf.len);
+    }
+  }
+}
+//var obj=Object.prototype.toString
+newObj.saySom()
+console.log(newObj.myProp);
+console.log(newObj.myConf.len)
+newObj.reportConfig();
+newObj.updateConf({len: "fr", cashing: false});
+newObj.reportConfig();
+</script>
+
+
+
+<script>
+
+var testModule = (function () {
+ 
+  var counter = 0;
+ 
+  return {
+ 
+    incrementCounter: function () {
+      return counter++;
+    },
+ 
+    resetCounter: function () {
+      console.log( "counter value prior to reset: " + counter );
+      counter = 0;
+    }
+  };
+ 
+})();
+ 
+// Usage:
+ 
+// Increment our counter
+testModule.incrementCounter();
+ 
+// Check the counter value and reset
+// Outputs: counter value prior to reset: 1
+testModule.resetCounter();
+
+</script>
+  
+
+
+
+<script>
+  function power(base,exponent){
+    if (exponent==0)
+      return 1;
+    else
+      return base*power(base,exponent-1)
+  }
+  console.log(power(2,3))
+</script>
+
+
+
+<script>
+  var testModule = (function () {
+ 
+  var counter = 0;
+ 
+  return {
+ 
+    incrementCounter: function () {
+      return counter++;
+    },
+ 
+    resetCounter: function () {
+      console.log( "counter value prior to reset: " + counter );
+      counter = 0;
+    }
+  };
+ 
+})();
+ 
+// Usage:
+ 
+// Increment our counter
+testModule.incrementCounter();
+ 
+// Check the counter value and reset
+// Outputs: counter value prior to reset: 1
+testModule.resetCounter();
+</script>

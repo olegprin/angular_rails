@@ -1,1 +1,107 @@
-<%=render "home/all_film"%>
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>Carousel Skeleton - jCarousel Examples</title>
+
+
+    </head>
+    <body>
+
+        <div class="wrapper">
+            <h1>Carousel Skeleton</h1>
+
+            <p>This is an unstyled carousel which you can use as a foundation for implementing your own carousels.</p>
+
+            <!--
+            Mutual wrapper, encloses the carousel and the plugin elements to
+            enable auto-detection of the carousel for the plugins.
+            -->
+            <div class="jcarousel-wrapper">
+
+                <!-- Carousel -->
+                <div class="jcarousel">
+                    <ul>
+                        <li><img src="../_shared/img/img1.jpg" width="600" height="400" alt="1"></li>
+                        <li><img src="../_shared/img/img2.jpg" width="600" height="400" alt="2"></li>
+                        <li><img src="../_shared/img/img3.jpg" width="600" height="400" alt="3"></li>
+                        <li><img src="../_shared/img/img4.jpg" width="600" height="400" alt="4"></li>
+                        <li><img src="../_shared/img/img5.jpg" width="600" height="400" alt="5"></li>
+                        <li><img src="../_shared/img/img6.jpg" width="600" height="400" alt="6"></li>
+                    </ul>
+                </div>
+
+                <!-- Prev/next controls -->
+                <a href="#" class="jcarousel-control-prev">&lsaquo; Prev</a>
+                <a href="#" class="jcarousel-control-next">Next &rsaquo;</a>
+
+                <!-- Pagination -->
+                <p class="jcarousel-pagination">
+                    <!-- Pagination items will be generated in here -->
+                </p>
+
+            </div>
+
+        </div>
+
+   <script>
+
+(function($) {
+    $(function() {
+        /*
+        Carousel initialization
+        */
+        $('.jcarousel')
+            $(this).jcarousel({
+                // Options go here
+            });
+
+        /*
+         Prev control initialization
+         */
+        $('.jcarousel-control-prev')
+            .on('jcarouselcontrol:active', function() {
+                $(this).removeClass('inactive');
+            })
+            .on('jcarouselcontrol:inactive', function() {
+                $(this).addClass('inactive');
+            })
+            .jcarouselControl({
+                // Options go here
+                target: '-=1'
+            });
+
+        /*
+         Next control initialization
+         */
+        $('.jcarousel-control-next')
+            .on('jcarouselcontrol:active', function() {
+                $(this).removeClass('inactive');
+            })
+            .on('jcarouselcontrol:inactive', function() {
+                $(this).addClass('inactive');
+            })
+            .jcarouselControl({
+                // Options go here
+                target: '+=1'
+            });
+
+        /*
+         Pagination initialization
+         */
+        $('.jcarousel-pagination')
+            .on('jcarouselpagination:active', 'a', function() {
+                $(this).addClass('active');
+            })
+            .on('jcarouselpagination:inactive', 'a', function() {
+                $(this).removeClass('active');
+            })
+            .jcarouselPagination({
+                // Options go here
+            });
+    });
+})(jQuery);
+ </script>
+    </body>
+</html>
+

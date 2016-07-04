@@ -2,6 +2,8 @@ Rails.application.routes.draw do
 
   
   
+  resources :artists
+  resources :posts
   resources :angulars
   mount Ckeditor::Engine => '/ckeditor'
   get 'rss' => 'rss#feed', format: 'rss' 

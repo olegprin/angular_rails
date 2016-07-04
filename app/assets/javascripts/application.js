@@ -17,8 +17,8 @@
 //= require angular-resource
 //= require angular-route
 //= require main
-
-
+//= require films
+//= require angular-rails-templates
 //= require_self
 //= require_tree ./controllers/main
 //= require_tree .

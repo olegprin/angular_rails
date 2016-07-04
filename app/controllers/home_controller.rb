@@ -1,7 +1,7 @@
 class HomeController < ApplicationController
 
   def index
-
+    @session = params["Id"];
   end
 
   def search
@@ -18,6 +18,7 @@ class HomeController < ApplicationController
   def all_film
     @films = Film.can_publish_sort.paginate(:page => params[:page], :per_page => Configurable['blogs_per_page'])
     set_parameters
+    @se = "params[:vasa]77"
     @resourse='Film'
     @active='current'
     render "home/all_film"

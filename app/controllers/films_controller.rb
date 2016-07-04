@@ -12,8 +12,8 @@ class FilmsController < ApplicationController
   # GET /films
   # GET /films.json
   def index
-    @films = Film.where(send_new_film: false).paginate(:page => params[:page], :per_page => Configurable['films_per_page'])
-    render "all_film"
+    #@films = Film.where(send_new_film: false).paginate(:page => params[:page], :per_page => Configurable['films_per_page'])
+    #render "all_film"
   end 
   # GET /films/1
   # GET /films/1.json
@@ -42,6 +42,7 @@ class FilmsController < ApplicationController
   def new
     @film = Film.new
     @film.tags.build
+    @qwer="fff"
     @active="current"
   end
    

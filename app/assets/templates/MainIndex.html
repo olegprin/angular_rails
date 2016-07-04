@@ -1,0 +1,11 @@
+  <body ng-controller="IndexCtrl">
+<h1 class="text-center">My olesa</h1>
+
+<div class="row" ng-repeat="post in data.posts">
+    <h2><a ng-click="viewPost($index)">{{ post.title }}</a></h2>
+    <p>{{ post.index }}</p>
+</div>
+
+
+<h2><a ng-click="filmNew()">olllleeesssaaa</a></h2>
+</body>
